@@ -106,6 +106,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .platform-row{display:flex;gap:7px;flex-wrap:wrap}
 .platform-chip{font-size:11px;font-weight:500;padding:5px 11px;border-radius:20px;display:flex;align-items:center;gap:4px}
 .chip-live{background:rgba(24,95,165,0.2);color:#85B7EB;border:0.5px solid rgba(24,95,165,0.4)}
+.chip-live[href]:hover{background:rgba(24,95,165,0.35);border-color:#85B7EB;transform:translateY(-1px);transition:all 0.2s}
 .chip-soon{background:rgba(255,255,255,0.05);color:rgba(232,240,251,0.4);border:0.5px solid rgba(255,255,255,0.1)}
 
 /* ABOUT */
@@ -212,7 +213,7 @@ footer span{color:var(--text);font-weight:500}
         <div class="card-tagline" id="vaultTagline"></div>
         <div class="card-desc" id="vaultDesc"></div>
         <div class="platform-row">
-          <span class="platform-chip chip-live" id="vaultAndroid"></span>
+          <a class="platform-chip chip-live" id="vaultAndroid" href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"></a>
           <span class="platform-chip chip-soon" id="vaultIOS"></span>
         </div>
       </div>
