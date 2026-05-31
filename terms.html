@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy & Terms of Service — Mercury Labs Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --blue:#185FA5;--blue-light:#3A82C4;--blue-glow:rgba(24,95,165,0.18);
+  --teal:#5DCAA5;--teal-glow:rgba(93,202,165,0.15);
+  --amber:#EF9F27;--amber-glow:rgba(239,159,39,0.2);
+  --dark:#06101E;--dark2:#0C1A2E;
+  --text:#E8F0FB;--muted:#7A9BC4;--border:rgba(93,202,165,0.15);
+}
+html{scroll-behavior:smooth}
+body{background:var(--dark);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden;min-height:100vh}
+
+/* BG effects */
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d,3s) ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:0.05}to{opacity:var(--o,0.6)}}
+.orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+.orb1{width:500px;height:500px;background:var(--blue-glow);top:-100px;right:-100px;animation:drift 12s ease-in-out infinite alternate}
+.orb2{width:400px;height:400px;background:var(--teal-glow);bottom:0;left:-100px;animation:drift 14s ease-in-out infinite alternate-reverse}
+@keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(30px,20px)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(6,16,30,0.80);backdrop-filter:blur(20px);border-bottom:0.5px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:#fff;letter-spacing:-1px;flex-shrink:0}
+.logo-name{font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:var(--text);white-space:nowrap}
+.logo-name em{color:var(--teal);font-style:normal}
+.nav-back{font-size:13px;font-weight:400;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:7px;border:0.5px solid rgba(255,255,255,0.1);transition:color 0.2s,background 0.2s,border-color 0.2s;display:flex;align-items:center;gap:6px}
+.nav-back:hover{color:var(--text);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.2)}
+
+/* TOC SIDEBAR */
+.layout{position:relative;z-index:1;display:flex;gap:0;max-width:1100px;margin:0 auto;padding:100px 24px 80px}
+.toc{width:220px;flex-shrink:0;position:sticky;top:80px;height:fit-content;padding-right:32px}
+.toc-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc-list a{font-size:12px;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:6px;display:block;transition:color 0.2s,background 0.2s;border-left:2px solid transparent;line-height:1.4}
+.toc-list a:hover{color:var(--text);background:rgba(255,255,255,0.04)}
+.toc-list a.active{color:var(--teal);border-left-color:var(--teal);background:rgba(93,202,165,0.06)}
+.toc-list .toc-part{font-size:11px;font-weight:600;color:var(--text);padding:10px 10px 4px;text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+
+/* MAIN CONTENT */
+.content{flex:1;min-width:0}
+
+/* PAGE HEADER */
+.page-header{margin-bottom:48px}
+.page-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:18px;padding:6px 16px;border-radius:20px;border:0.5px solid rgba(239,159,39,0.3);background:rgba(239,159,39,0.07)}
+.page-title{font-family:'Sora',sans-serif;font-size:clamp(26px,3.5vw,42px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.page-title em{font-style:normal;background:linear-gradient(90deg,var(--blue-light),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-meta{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted)}
+.page-meta span{display:flex;align-items:center;gap:5px}
+.page-meta a{color:var(--teal);text-decoration:none}
+.page-meta a:hover{text-decoration:underline}
+.notice-box{margin-top:20px;padding:16px 20px;border-radius:12px;border:0.5px solid rgba(93,202,165,0.25);background:rgba(93,202,165,0.06);font-size:13px;line-height:1.7;color:rgba(232,240,251,0.8)}
+.notice-box strong{color:var(--teal)}
+
+/* DOCUMENT SECTIONS */
+.doc-part{margin-bottom:56px}
+.part-label{display:inline-block;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue-light);font-weight:600;margin-bottom:8px;padding:4px 12px;border-radius:20px;background:rgba(24,95,165,0.12);border:0.5px solid rgba(24,95,165,0.3)}
+.part-title{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.5px;margin-bottom:28px;color:var(--text)}
+
+.section{margin-bottom:36px;scroll-margin-top:90px}
+.section-title{font-family:'Sora',sans-serif;font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-num{width:26px;height:26px;border-radius:6px;background:rgba(24,95,165,0.15);border:0.5px solid rgba(24,95,165,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--blue-light);flex-shrink:0}
+.section-body{font-size:14px;line-height:1.85;color:rgba(232,240,251,0.72);padding-left:36px}
+.section-body p{margin-bottom:10px}
+.section-body p:last-child{margin-bottom:0}
+.section-body strong{color:var(--text);font-weight:500}
+.section-body a{color:var(--teal);text-decoration:none}
+.section-body a:hover{text-decoration:underline}
+.section-body ul{padding-left:18px;display:flex;flex-direction:column;gap:6px;margin:8px 0}
+.section-body ul li{list-style:none;padding-left:14px;position:relative}
+.section-body ul li::before{content:'·';position:absolute;left:0;color:var(--teal);font-weight:700}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+.data-table th{text-align:left;padding:10px 14px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:0.5px solid rgba(255,255,255,0.1)}
+.data-table td{padding:11px 14px;border-bottom:0.5px solid rgba(255,255,255,0.05);color:rgba(232,240,251,0.72);line-height:1.5;vertical-align:top}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:rgba(255,255,255,0.02)}
+.data-table td strong{color:var(--text);font-weight:500}
+.table-wrap{border-radius:12px;border:0.5px solid rgba(255,255,255,0.08);overflow:hidden;background:rgba(12,26,46,0.5);margin:12px 0}
+
+/* PLATFORM STEPS */
+.platform-steps{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.platform-step{padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.03);border:0.5px solid rgba(255,255,255,0.07);font-size:13px;color:rgba(232,240,251,0.65);line-height:1.5}
+.platform-step strong{color:var(--text)}
+
+/* DIVIDER */
+.doc-divider{border:none;border-top:0.5px solid var(--border);margin:48px 0}
+
+/* CONTACT CARD */
+.contact-card{border-radius:16px;border:0.5px solid rgba(24,95,165,0.3);background:rgba(12,26,46,0.7);padding:28px 32px;position:relative;overflow:hidden;margin-top:16px}
+.contact-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue-light),var(--teal),transparent)}
+.contact-card p{font-size:14px;color:var(--muted);margin-bottom:14px;line-height:1.7}
+.email-link{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;border:0.5px solid rgba(24,95,165,0.4);background:rgba(24,95,165,0.1);color:#85B7EB;text-decoration:none;font-size:14px;font-weight:500;transition:all 0.2s}
+.email-link:hover{background:rgba(24,95,165,0.22);border-color:var(--blue-light);transform:translateY(-1px)}
+.tagline{margin-top:16px;font-size:12px;color:var(--muted);font-style:italic}
+
+/* FOOTER */
+footer{position:relative;z-index:1;text-align:center;padding:24px;border-top:0.5px solid var(--border);font-size:12px;color:var(--muted)}
+footer strong{color:var(--text)}
+
+/* RESPONSIVE */
+@media(max-width:720px){
+  .toc{display:none}
+  .layout{padding:88px 16px 60px}
+  .section-body{padding-left:0}
+  .section-title{flex-wrap:wrap}
+  nav{padding:12px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="https://teamshiicloud.github.io">
+    <div class="logo-mark">ML</div>
+    <span class="logo-name">Mercury<em>Labs</em> Studio</span>
+  </a>
+  <a class="nav-back" href="https://teamshiicloud.github.io">← Back to Home</a>
+</nav>
+
+<div class="layout">
+
+  <!-- TOC -->
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ul class="toc-list">
+      <li class="toc-part">Privacy Policy</li>
+      <li><a href="#p1s1">1. Introduction</a></li>
+      <li><a href="#p1s2">2. Third-Party Services</a></li>
+      <li><a href="#p1s3">3. Advertising</a></li>
+      <li><a href="#p1s4">4. Leaderboards & Cloud</a></li>
+      <li><a href="#p1s5">5. Local Data Storage</a></li>
+      <li><a href="#p1s6">6. In-App Purchases</a></li>
+      <li><a href="#p1s7">7. Children's Privacy</a></li>
+      <li><a href="#p1s8">8. User Rights</a></li>
+      <li><a href="#p1s9">9. Data Security</a></li>
+      <li><a href="#p1s10">10. Policy Changes</a></li>
+      <li class="toc-part">Terms of Service</li>
+      <li><a href="#p2s1">1. Acceptance</a></li>
+      <li><a href="#p2s2">2. Free Tier</a></li>
+      <li><a href="#p2s3">3. Subscriptions</a></li>
+      <li><a href="#p2s4">4. Intellectual Property</a></li>
+      <li><a href="#p2s5">5. User Conduct</a></li>
+      <li><a href="#p2s6">6. Disclaimer</a></li>
+      <li><a href="#p2s7">7. Liability</a></li>
+      <li><a href="#p2s8">8. Termination</a></li>
+      <li><a href="#p2s9">9. Governing Law</a></li>
+      <li><a href="#p2s10">10. Term Changes</a></li>
+      <li class="toc-part">Contact</li>
+      <li><a href="#contact">Get in Touch</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-eyebrow">Legal</div>
+      <h1 class="page-title">Privacy Policy &<br><em>Terms of Service</em></h1>
+      <div class="page-meta">
+        <span>📅 Effective: May 1, 2026</span>
+        <span>🏢 Publisher: Mercury Labs Studio</span>
+        <span>✉️ <a href="mailto:teams.hi@icloud.com">teams.hi@icloud.com</a></span>
+      </div>
+      <div class="notice-box">
+        This document applies to all applications published by <strong>Mercury Labs Studio</strong>, including entertainment games, educational apps, productivity tools, and any other software products released under the Mercury Labs Studio brand.
+      </div>
+    </div>
+
+    <!-- ── PART I: PRIVACY POLICY ── -->
+    <div class="doc-part">
+      <div class="part-label">Part I</div>
+      <div class="part-title">Privacy Policy</div>
+
+      <div class="section" id="p1s1">
+        <div class="section-title"><span class="section-num">1</span> Introduction</div>
+        <div class="section-body">
+          <p>Mercury Labs Studio ("we", "us", "our") is committed to protecting your privacy. This Privacy Policy explains what data we collect, why we collect it, how it is stored, and your rights regarding that data.</p>
+          <p>We do <strong>not</strong> collect personal identifiers such as your full name, email address, or phone number unless you voluntarily contact us for support.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p1s2">
+        <div class="section-title"><span class="section-num">2</span> Third-Party Services</div>
+        <div class="section-body">
+          <p>Depending on the specific app you use, we may integrate one or more of the following third-party services:</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Service</th><th>Purpose</th><th>Data Involved</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Firebase Firestore</strong></td><td>Cloud data storage (leaderboards, user progress, seasonal events)</td><td>Player alias, score, country code</td></tr>
+                <tr><td><strong>Firebase Crashlytics</strong></td><td>App performance monitoring and crash reporting</td><td>Anonymized crash logs, device model, OS version</td></tr>
+                <tr><td><strong>Firebase Analytics</strong></td><td>App usage statistics and feature analytics</td><td>Anonymized usage events</td></tr>
+                <tr><td><strong>Google AdMob</strong></td><td>In-app advertising (free tier, where applicable)</td><td>Device advertising ID, ad interaction data</td></tr>
+                <tr><td><strong>RevenueCat</strong></td><td>Subscription and in-app purchase management</td><td>Device ID, purchase receipts, entitlement status</td></tr>
+                <tr><td><strong>Google Play Billing</strong></td><td>Payment processing (Android)</td><td>Purchase tokens (no card data stored by us)</td></tr>
+                <tr><td><strong>Apple App Store</strong></td><td>Payment processing (iOS)</td><td>Purchase tokens (no card data stored by us)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Not all services are active in every app. Each app's store listing specifies which services are in use.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p1s3">
+        <div class="section-title"><span class="section-num">3</span> Advertising</div>
+        <div class="section-body">
+          <p><strong>Some of our apps include advertisements</strong> served by Google AdMob. Ads are only shown to free-tier users; premium subscribers enjoy an ad-free experience.</p>
+          <p>If an app contains no ads, this will be clearly stated in the app description. AdMob may collect your device's advertising ID to serve relevant ads. You can opt out of personalized ads through your device settings:</p>
+          <div class="platform-steps">
+            <div class="platform-step"><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</div>
+            <div class="platform-step"><strong>iOS:</strong> Settings → Privacy → Apple Advertising → Personalized Ads (off)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="p1s4">
+        <div class="section-title"><span class="section-num">4</span> Leaderboards & Cloud Data</div>
+        <div class="section-body">
+          <p>For apps featuring global leaderboards or cloud-synced content powered by Firebase:</p>
+          <ul>
+            <li>Your <strong>player alias</strong> (chosen by you) and <strong>score</strong> are stored in Firebase Firestore and may be visible to other users worldwide.</li>
+            <li>Your <strong>country</strong> (entered voluntarily or inferred from device locale) may be displayed for regional filtering.</li>
+            <li>Leaderboard data is scoped per app and per time period (Today, This Week, All Time).</li>
+            <li>You may request deletion of your leaderboard data at any time by contacting us at <a href="mailto:teams.hi@icloud.com">teams.hi@icloud.com</a>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p1s5">
+        <div class="section-title"><span class="section-num">5</span> Local Data Storage</div>
+        <div class="section-body">
+          <ul>
+            <li>Your game progress, app settings, and language preferences are stored <strong>locally on your device</strong> using standard mobile storage mechanisms (e.g., AsyncStorage on React Native).</li>
+            <li>This data does not leave your device unless a specific feature (such as leaderboard submission) explicitly syncs it to the cloud.</li>
+            <li>Uninstalling the app permanently removes all locally stored data.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p1s6">
+        <div class="section-title"><span class="section-num">6</span> In-App Purchases</div>
+        <div class="section-body">
+          <ul>
+            <li>All financial transactions are processed securely by <strong>Apple App Store</strong> (iOS) or <strong>Google Play</strong> (Android). We never handle your payment details directly.</li>
+            <li>We do <strong>not</strong> store credit card numbers, bank account information, or any financial credentials.</li>
+            <li>Purchase validation and subscription status are managed by <strong>RevenueCat</strong> using encrypted receipt tokens only.</li>
+            <li>Pricing varies by app and region. Refer to each app's store listing for current pricing.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p1s7">
+        <div class="section-title"><span class="section-num">7</span> Children's Privacy</div>
+        <div class="section-body">
+          <p>Our apps are not directed at children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has submitted personal data through one of our apps, please contact us immediately at <a href="mailto:teams.hi@icloud.com">teams.hi@icloud.com</a> and we will promptly delete the information.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p1s8">
+        <div class="section-title"><span class="section-num">8</span> User Rights (GDPR / CCPA)</div>
+        <div class="section-body">
+          <p>Depending on your jurisdiction, you may have the following rights regarding your data:</p>
+          <ul>
+            <li><strong>Access</strong> — Request information about what data we hold about you</li>
+            <li><strong>Deletion</strong> — Request deletion of your leaderboard entries or cloud data</li>
+            <li><strong>Opt-out</strong> — Decline leaderboard participation by not submitting scores</li>
+            <li><strong>Portability</strong> — Request a copy of your data in a portable format</li>
+          </ul>
+          <p>To exercise any of these rights, contact us at: <a href="mailto:teams.hi@icloud.com">teams.hi@icloud.com</a>. We will respond to all requests within 30 days.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p1s9">
+        <div class="section-title"><span class="section-num">9</span> Data Security</div>
+        <div class="section-body">
+          <p>We take reasonable technical measures to protect your data. Firebase data is secured with Firestore security rules. Purchase data is handled entirely by Apple, Google, and RevenueCat — all of which maintain industry-standard security certifications.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p1s10">
+        <div class="section-title"><span class="section-num">10</span> Changes to This Policy</div>
+        <div class="section-body">
+          <p>We may update this Privacy Policy as our apps evolve. We will update the "Effective Date" at the top of this document when changes are made. Continued use of our apps after changes are posted constitutes your acceptance of the revised policy.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="doc-divider">
+
+    <!-- ── PART II: TERMS OF SERVICE ── -->
+    <div class="doc-part">
+      <div class="part-label">Part II</div>
+      <div class="part-title">Terms of Service</div>
+
+      <div class="section" id="p2s1">
+        <div class="section-title"><span class="section-num">1</span> Acceptance of Terms</div>
+        <div class="section-body">
+          <p>By downloading, installing, or using any application published by Mercury Labs Studio, you agree to be bound by these Terms of Service. If you do not agree, please do not use our apps.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p2s2">
+        <div class="section-title"><span class="section-num">2</span> Free Tier</div>
+        <div class="section-body">
+          <ul>
+            <li>Free users receive a limited number of plays, sessions, or credits as specified within each individual app.</li>
+            <li>Free users may have access to leaderboards with some restrictions on score submission.</li>
+            <li>Free users in applicable apps will see advertisements served by Google AdMob.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p2s3">
+        <div class="section-title"><span class="section-num">3</span> Premium Subscriptions & In-App Purchases</div>
+        <div class="section-body">
+          <ul>
+            <li>Payments are charged to your Apple or Google account at the time of purchase confirmation.</li>
+            <li>Subscriptions <strong>automatically renew</strong> unless canceled at least 24 hours before the end of the current billing period.</li>
+            <li>You can manage or cancel your subscription at any time through your device's App Store or Play Store settings.</li>
+            <li>Unused portions of any free trial period are forfeited upon upgrading to a paid plan.</li>
+            <li>All refunds are subject to Apple App Store and Google Play Store refund policies. Mercury Labs Studio does not directly process refunds.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p2s4">
+        <div class="section-title"><span class="section-num">4</span> Intellectual Property</div>
+        <div class="section-body">
+          <p>All content within Mercury Labs Studio applications — including but not limited to game mechanics, artwork, UI design, sound effects, written lore, quiz content, learning materials, and brand assets — is the exclusive intellectual property of <strong>Mercury Labs Studio</strong>.</p>
+          <ul>
+            <li>Reverse engineering, decompiling, disassembling, or redistributing any part of our apps is strictly prohibited.</li>
+            <li>Cloud-hosted content (including seasonal data, quiz banks, and learning content stored on Firebase) is proprietary and may not be extracted, scraped, or reproduced.</li>
+            <li>The Mercury Labs Studio name, logo, and product names are trademarks of Mercury Labs Studio.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p2s5">
+        <div class="section-title"><span class="section-num">5</span> User Conduct</div>
+        <div class="section-body">
+          <p>By using our apps, you agree not to:</p>
+          <ul>
+            <li>Manipulate leaderboard scores or rankings through unauthorized means.</li>
+            <li>Use automated tools, bots, scripts, or modified clients to interact with our apps or backend services.</li>
+            <li>Exploit bugs, glitches, or vulnerabilities for unfair advantage. (We encourage responsible disclosure — please report issues to <a href="mailto:teams.hi@icloud.com">teams.hi@icloud.com</a>.)</li>
+            <li>Attempt to gain unauthorized access to Firebase databases, RevenueCat APIs, or any other backend infrastructure.</li>
+            <li>Use our apps in any way that violates applicable local, national, or international law.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p2s6">
+        <div class="section-title"><span class="section-num">6</span> Disclaimer of Warranties</div>
+        <div class="section-body">
+          <p>Our apps are provided "as is" without warranties of any kind, express or implied. We do not guarantee that the apps will be error-free, uninterrupted, or free of viruses or other harmful components.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p2s7">
+        <div class="section-title"><span class="section-num">7</span> Limitation of Liability</div>
+        <div class="section-body">
+          <p>To the fullest extent permitted by applicable law, Mercury Labs Studio shall not be liable for:</p>
+          <ul>
+            <li>Loss of data resulting from device failure, unauthorized modification (rooting or jailbreaking), or operating system updates.</li>
+            <li>Temporary unavailability of Firebase services affecting leaderboard or cloud-sync functionality.</li>
+            <li>Loss of app progress or purchases if the app is uninstalled or the device is reset.</li>
+            <li>Any indirect, incidental, special, consequential, or punitive damages arising from use of our apps.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" id="p2s8">
+        <div class="section-title"><span class="section-num">8</span> Termination</div>
+        <div class="section-body">
+          <p>We reserve the right to terminate or suspend access to our apps at our discretion, without notice, for conduct that we believe violates these Terms of Service or is harmful to other users, us, or third parties.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p2s9">
+        <div class="section-title"><span class="section-num">9</span> Governing Law</div>
+        <div class="section-body">
+          <p>These Terms of Service are governed by the applicable laws of the jurisdiction in which Mercury Labs Studio operates. Any disputes shall first be addressed through good-faith negotiation before any formal legal proceedings are initiated.</p>
+        </div>
+      </div>
+
+      <div class="section" id="p2s10">
+        <div class="section-title"><span class="section-num">10</span> Changes to These Terms</div>
+        <div class="section-body">
+          <p>We may update these Terms of Service from time to time. The updated version will be indicated by a revised "Effective Date." Your continued use of our apps after any changes constitutes acceptance of the new terms.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="doc-divider">
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+      <div class="section-title"><span class="section-num" style="width:auto;padding:0 10px">✉</span> Contact</div>
+      <div class="contact-card">
+        <p>For questions, data requests, bug reports, or support — we're happy to hear from you.</p>
+        <a href="mailto:teams.hi@icloud.com" class="email-link">✉️ teams.hi@icloud.com</a>
+        <p class="tagline">Mercury Labs Studio — Building games, apps and tools people love.</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>© 2025 <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
+
+<script>
+// Stars
+const se=document.getElementById('stars');
+for(let i=0;i<60;i++){
+  const s=document.createElement('div');s.className='star';
+  const z=Math.random()*2+0.4;
+  s.style.cssText=`width:${z}px;height:${z}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${2+Math.random()*4}s;--o:${0.2+Math.random()*0.6};animation-delay:${Math.random()*4}s`;
+  se.appendChild(s);
+}
+
+// Active TOC highlight on scroll
+const sections=document.querySelectorAll('.section[id]');
+const tocLinks=document.querySelectorAll('.toc-list a');
+function onScroll(){
+  let cur='';
+  sections.forEach(s=>{if(s.getBoundingClientRect().top<=100)cur=s.id});
+  tocLinks.forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
+  });
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+</script>
+</body>
+</html>
