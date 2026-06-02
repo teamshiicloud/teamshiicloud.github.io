@@ -109,6 +109,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .chip-live[href]:hover{background:rgba(24,95,165,0.35);border-color:#85B7EB;transform:translateY(-1px);transition:all 0.2s}
 .chip-soon{background:rgba(255,255,255,0.05);color:rgba(232,240,251,0.4);border:0.5px solid rgba(255,255,255,0.1)}
 
+/* Platform icon SVGs */
+.ic-android,.ic-apple{display:inline-block;vertical-align:middle;flex-shrink:0}
+
 /* ABOUT */
 .about{position:relative;z-index:1;padding:32px 24px 72px;max-width:780px;margin:0 auto;text-align:center}
 .about-title{font-family:'Sora',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:700;margin-bottom:18px;letter-spacing:-0.5px}
@@ -149,6 +152,73 @@ footer span{color:var(--text);font-weight:500}
 /* ANIMATION */
 .fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
 .fade-up.visible{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+/* Tablet */
+@media(max-width:768px){
+  nav{padding:12px 20px;gap:12px}
+  .logo-name{font-size:13px}
+  .nav-mid{gap:2px}
+  .nav-link{font-size:12px;padding:5px 8px}
+  #langSelect{font-size:12px;padding:6px 28px 6px 10px}
+  .hero{padding:90px 20px 70px}
+  .hero h1{letter-spacing:-1px}
+  .hero-sub{font-size:15px}
+  .cta-group{gap:10px}
+  .btn-primary,.btn-ghost{padding:12px 22px;font-size:13px}
+  .products{padding:12px 20px 56px}
+  .products-grid{grid-template-columns:1fr;gap:18px}
+  .about{padding:24px 20px 56px}
+  .contact{padding:0 20px 64px}
+  .contact-card{padding:32px 24px}
+  .pillars{gap:10px}
+  .pillar{min-width:100px;padding:12px 14px}
+}
+
+/* Mobile */
+@media(max-width:480px){
+  /* Nav — hamburger-free: collapse nav links, keep logo + lang */
+  nav{padding:10px 16px;flex-wrap:wrap;gap:8px}
+  .nav-mid{order:3;width:100%;justify-content:center;gap:0;border-top:0.5px solid var(--border);margin-top:4px;padding-top:6px}
+  .nav-link{font-size:11.5px;padding:5px 9px}
+  .logo-name{display:none} /* keep icon only on very small */
+  .lang-select-wrap{margin-left:auto}
+  #langSelect{font-size:11.5px;padding:5px 26px 5px 9px}
+
+  /* Hero */
+  .hero{padding:130px 16px 60px}
+  .hero-eyebrow{font-size:10px;letter-spacing:1.5px;padding:6px 14px}
+  .hero h1{letter-spacing:-0.5px;margin-bottom:18px}
+  .hero-sub{font-size:14px;line-height:1.75;margin-bottom:36px}
+  .cta-group{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:48px}
+  .btn-primary,.btn-ghost{width:100%;text-align:center;padding:14px 20px;font-size:14px}
+
+  /* Cards */
+  .products{padding:8px 16px 48px}
+  .card-header{padding:20px 20px 0}
+  .card-body{padding:14px 20px 20px}
+  .card-name{font-size:19px}
+  .platform-row{flex-direction:column;gap:6px}
+  .platform-chip{justify-content:center}
+
+  /* About */
+  .about{padding:20px 16px 48px}
+  .pillars{flex-direction:column;align-items:center;gap:10px}
+  .pillar{width:100%;max-width:280px}
+
+  /* Contact */
+  .contact{padding:0 16px 56px}
+  .contact-card{padding:28px 18px}
+  .contact-title{font-size:18px}
+  .email-link{font-size:13.5px;padding:12px 18px;width:100%;justify-content:center}
+
+  /* Orbs — reduce on mobile for perf */
+  .orb1{width:300px;height:300px}
+  .orb2{width:250px;height:250px}
+  .orb3{width:180px;height:180px}
+
+  footer{font-size:11px;padding:22px 16px}
+}
 </style>
 </head>
 <body>
@@ -269,6 +339,8 @@ footer span{color:var(--text);font-weight:500}
 <footer id="footerText"></footer>
 
 <script>
+const ANDROID_ICO=`<svg class="ic-android" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg>`;
+const APPLE_ICO=`<svg class="ic-apple" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`;
 const T={
   en:{
     eyebrow:"Mercury Labs Studio · Est. 2025",
@@ -279,10 +351,10 @@ const T={
     secLabel:"Our Products",secAboutLabel:"About Us",secContactLabel:"Get in Touch",
     vaultStatus:"Live Now",vaultTagline:"Mini game hub · Alchemy & Modern World",
     vaultDesc:"A vibrant entertainment world blending mystical alchemy with modern urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.",
-    vaultAndroid:"🤖 Android · Live",vaultIOS:"🍎 iOS · Coming Soon",
+    vaultAndroid:`${ANDROID_ICO} Android · Live`,vaultIOS:`${APPLE_ICO} iOS · Coming Soon`,
     learnStatus:"Coming Soon",learnTagline:"Micro-learning app · Learn smarter, go further",
     learnDesc:"Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.",
-    learnAndroid:"🤖 Android · Coming Soon",learnIOS:"🍎 iOS · Coming Soon",
+    learnAndroid:`${ANDROID_ICO} Android · Coming Soon`,learnIOS:`${APPLE_ICO} iOS · Coming Soon`,
     aboutTitle:'Built with <span style="color:var(--teal)">Passion</span>',
     aboutText:'We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.',
     p1name:"Mobile Gaming",p1desc:"Light games, refined UI",
@@ -302,10 +374,10 @@ const T={
     secLabel:"プロダクト一覧",secAboutLabel:"私たちについて",secContactLabel:"ご連絡",
     vaultStatus:"配信中",vaultTagline:"ミニゲームハブ · 錬金術と現代の世界",
     vaultDesc:"神秘的な錬金術と都市の現代生活が融合したエンタメワールド。カジュアルなミニゲームで、いつでもリラックスできます。",
-    vaultAndroid:"🤖 Android · 配信中",vaultIOS:"🍎 iOS · 近日公開",
+    vaultAndroid:`${ANDROID_ICO} Android · 配信中`,vaultIOS:`${APPLE_ICO} iOS · 近日公開`,
     learnStatus:"近日公開",learnTagline:"マイクロ学習アプリ · スマートに学ぼう",
     learnDesc:"AIによる個別最適化、科学的な間隔反復、厳選コンテンツで学習効率を最大化。速く学び、長く記憶し、毎日成長できます。",
-    learnAndroid:"🤖 Android · 近日公開",learnIOS:"🍎 iOS · 近日公開",
+    learnAndroid:`${ANDROID_ICO} Android · 近日公開`,learnIOS:`${APPLE_ICO} iOS · 近日公開`,
     aboutTitle:'<span style="color:var(--teal)">情熱</span>で作られた',
     aboutText:'私たちはベトナムを拠点とする小さなチームですが、高い集中力を持っています。すべてのプロダクトは「<strong>ユーザーが本当に必要なものは何か？</strong>」という問いから始まります。最高のテクノロジーは<strong>背景に溶け込み</strong>、純粋な体験と本質的な価値だけを残すと信じています。',
     p1name:"モバイルゲーム",p1desc:"軽いゲーム、洗練されたUI",
@@ -325,10 +397,10 @@ const T={
     secLabel:"우리의 제품",secAboutLabel:"팀 소개",secContactLabel:"연락하기",
     vaultStatus:"출시됨",vaultTagline:"미니 게임 허브 · 연금술과 현대 세계",
     vaultDesc:"신비로운 연금술과 현대 도시 생활이 어우러진 엔터테인먼트 세계. 캐주얼 미니 게임으로 언제든지 편안한 시간을 즐기세요.",
-    vaultAndroid:"🤖 Android · 출시됨",vaultIOS:"🍎 iOS · 출시 예정",
+    vaultAndroid:`${ANDROID_ICO} Android · 출시됨`,vaultIOS:`${APPLE_ICO} iOS · 출시 예정`,
     learnStatus:"출시 예정",learnTagline:"마이크로 러닝 앱 · 스마트하게 배우기",
     learnDesc:"AI 개인화 학습 경로, 과학적 반복 학습, 엄선된 콘텐츠로 더 빠르게 배우고, 오래 기억하고, 매일 성장하세요.",
-    learnAndroid:"🤖 Android · 출시 예정",learnIOS:"🍎 iOS · 출시 예정",
+    learnAndroid:`${ANDROID_ICO} Android · 출시 예정`,learnIOS:`${APPLE_ICO} iOS · 출시 예정`,
     aboutTitle:'<span style="color:var(--teal)">열정</span>으로 만든',
     aboutText:'저희는 베트남에 기반을 둔 작지만 집중력 높은 팀입니다. 모든 제품은 하나의 질문에서 시작합니다: <strong>사용자가 진정으로 필요한 것은 무엇인가?</strong> 최고의 기술은 <strong>배경 속으로 사라지고</strong> — 순수한 경험과 진정한 가치만 남긴다고 믿습니다.',
     p1name:"모바일 게임",p1desc:"가벼운 게임, 세련된 UI",
@@ -348,10 +420,10 @@ const T={
     secLabel:"Sản phẩm của chúng tôi",secAboutLabel:"Về chúng tôi",secContactLabel:"Liên hệ",
     vaultStatus:"Đang hoạt động",vaultTagline:"Hub mini game · Nhà giả kim & Thế giới hiện đại",
     vaultDesc:"Thế giới giải trí kết hợp giữa thuật giả kim huyền bí và nhịp sống đô thị hiện đại. Mini game đa dạng, gameplay nhẹ nhàng — hoàn hảo cho mọi khoảnh khắc thư giãn.",
-    vaultAndroid:"🤖 Android · Live",vaultIOS:"🍎 iOS · Sắp ra mắt",
+    vaultAndroid:`${ANDROID_ICO} Android · Live`,vaultIOS:`${APPLE_ICO} iOS · Sắp ra mắt`,
     learnStatus:"Sắp ra mắt",learnTagline:"Micro-learning app · Học thông minh, tiến xa hơn",
     learnDesc:"Ứng dụng học tập thế hệ mới với AI cá nhân hóa lộ trình, hệ thống spaced repetition khoa học và nội dung được chắt lọc — học nhanh, nhớ lâu, tiến bộ mỗi ngày.",
-    learnAndroid:"🤖 Android · Sắp ra mắt",learnIOS:"🍎 iOS · Sắp ra mắt",
+    learnAndroid:`${ANDROID_ICO} Android · Sắp ra mắt`,learnIOS:`${APPLE_ICO} iOS · Sắp ra mắt`,
     aboutTitle:'Được tạo ra với <span style="color:var(--teal)">nhiệt huyết</span>',
     aboutText:'Chúng tôi là đội ngũ nhỏ nhưng tập trung cao độ, đặt trụ sở tại Việt Nam. Mỗi sản phẩm bắt đầu từ câu hỏi: <strong>Người dùng thực sự cần gì?</strong> Chúng tôi tin rằng công nghệ tốt nhất là công nghệ <strong>biến mất vào nền</strong> — để lại chỉ trải nghiệm thuần túy và giá trị thực.',
     p1name:"Mobile Gaming",p1desc:"Game nhẹ, UI tinh tế",
@@ -371,10 +443,10 @@ const T={
     secLabel:"ผลิตภัณฑ์ของเรา",secAboutLabel:"เกี่ยวกับเรา",secContactLabel:"ติดต่อ",
     vaultStatus:"เปิดให้บริการ",vaultTagline:"มินิเกมฮับ · การเล่นแร่แปรธาตุ & โลกสมัยใหม่",
     vaultDesc:"โลกบันเทิงที่ผสมผสานระหว่างการเล่นแร่แปรธาตุลึกลับกับชีวิตเมืองสมัยใหม่ มินิเกมหลากหลาย เล่นง่าย — เหมาะกับทุกช่วงเวลาพักผ่อน",
-    vaultAndroid:"🤖 Android · เปิดแล้ว",vaultIOS:"🍎 iOS · เร็วๆ นี้",
+    vaultAndroid:`${ANDROID_ICO} Android · เปิดแล้ว`,vaultIOS:`${APPLE_ICO} iOS · เร็วๆ นี้`,
     learnStatus:"เร็วๆ นี้",learnTagline:"แอปเรียนรู้แบบไมโคร · เรียนฉลาด ก้าวไกล",
     learnDesc:"แอปการเรียนรู้ยุคใหม่ด้วย AI ปรับแต่งเส้นทางส่วนตัว ระบบทบทวนซ้ำตามหลักวิทยาศาสตร์ และเนื้อหาคัดสรร — เรียนเร็ว จำได้นาน พัฒนาทุกวัน",
-    learnAndroid:"🤖 Android · เร็วๆ นี้",learnIOS:"🍎 iOS · เร็วๆ นี้",
+    learnAndroid:`${ANDROID_ICO} Android · เร็วๆ นี้`,learnIOS:`${APPLE_ICO} iOS · เร็วๆ นี้`,
     aboutTitle:'สร้างด้วย<span style="color:var(--teal)">ความหลงใหล</span>',
     aboutText:'เราเป็นทีมเล็กแต่มีสมาธิสูง ตั้งอยู่ในเวียดนาม ทุกผลิตภัณฑ์เริ่มต้นจากคำถามง่ายๆ: <strong>ผู้ใช้ต้องการอะไรจริงๆ?</strong> เราเชื่อว่าเทคโนโลยีที่ดีที่สุดคือเทคโนโลยีที่ <strong>หายไปในพื้นหลัง</strong> — เหลือไว้เพียงประสบการณ์บริสุทธิ์และคุณค่าที่แท้จริง',
     p1name:"โมบายล์เกม",p1desc:"เกมเบา UI ประณีต",
