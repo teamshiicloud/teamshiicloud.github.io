@@ -293,14 +293,14 @@ footer span{color:var(--text);font-weight:500}
       <div class="glow-line"></div>
       <div class="card-header">
         <div class="app-icon icon-learn">ML</div>
-        <div class="status-badge badge-soon" id="learnStatus"></div>
+        <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus"></span></div>
       </div>
       <div class="card-body">
         <div class="card-name">MercuryLearn</div>
         <div class="card-tagline" id="learnTagline"></div>
         <div class="card-desc" id="learnDesc"></div>
         <div class="platform-row">
-          <span class="platform-chip chip-soon" id="learnAndroid"></span>
+          <a class="platform-chip chip-live" id="learnAndroid" href="https://play.google.com/store/apps/details?id=com.mercurylearn.app" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"></a>
           <span class="platform-chip chip-soon" id="learnIOS"></span>
         </div>
       </div>
@@ -352,9 +352,9 @@ const T={
     vaultStatus:"Live Now",vaultTagline:"Mini game hub · Alchemy & Modern World",
     vaultDesc:"A vibrant entertainment world blending mystical alchemy with modern urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.",
     vaultAndroid:`${ANDROID_ICO} Android · Live`,vaultIOS:`${APPLE_ICO} iOS · Coming Soon`,
-    learnStatus:"Coming Soon",learnTagline:"Micro-learning app · Learn smarter, go further",
+    learnStatus:"Live Now",learnTagline:"Micro-learning app · Learn smarter, go further",
     learnDesc:"Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.",
-    learnAndroid:`${ANDROID_ICO} Android · Coming Soon`,learnIOS:`${APPLE_ICO} iOS · Coming Soon`,
+    learnAndroid:`${ANDROID_ICO} Android · Live`,learnIOS:`${APPLE_ICO} iOS · Coming Soon`,
     aboutTitle:'Built with <span style="color:var(--teal)">Passion</span>',
     aboutText:'We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.',
     p1name:"Mobile Gaming",p1desc:"Light games, refined UI",
@@ -375,9 +375,9 @@ const T={
     vaultStatus:"配信中",vaultTagline:"ミニゲームハブ · 錬金術と現代の世界",
     vaultDesc:"神秘的な錬金術と都市の現代生活が融合したエンタメワールド。カジュアルなミニゲームで、いつでもリラックスできます。",
     vaultAndroid:`${ANDROID_ICO} Android · 配信中`,vaultIOS:`${APPLE_ICO} iOS · 近日公開`,
-    learnStatus:"近日公開",learnTagline:"マイクロ学習アプリ · スマートに学ぼう",
+    learnStatus:"配信中",learnTagline:"マイクロ学習アプリ · スマートに学ぼう",
     learnDesc:"AIによる個別最適化、科学的な間隔反復、厳選コンテンツで学習効率を最大化。速く学び、長く記憶し、毎日成長できます。",
-    learnAndroid:`${ANDROID_ICO} Android · 近日公開`,learnIOS:`${APPLE_ICO} iOS · 近日公開`,
+    learnAndroid:`${ANDROID_ICO} Android · 配信中`,learnIOS:`${APPLE_ICO} iOS · 近日公開`,
     aboutTitle:'<span style="color:var(--teal)">情熱</span>で作られた',
     aboutText:'私たちはベトナムを拠点とする小さなチームですが、高い集中力を持っています。すべてのプロダクトは「<strong>ユーザーが本当に必要なものは何か？</strong>」という問いから始まります。最高のテクノロジーは<strong>背景に溶け込み</strong>、純粋な体験と本質的な価値だけを残すと信じています。',
     p1name:"モバイルゲーム",p1desc:"軽いゲーム、洗練されたUI",
@@ -398,9 +398,9 @@ const T={
     vaultStatus:"출시됨",vaultTagline:"미니 게임 허브 · 연금술과 현대 세계",
     vaultDesc:"신비로운 연금술과 현대 도시 생활이 어우러진 엔터테인먼트 세계. 캐주얼 미니 게임으로 언제든지 편안한 시간을 즐기세요.",
     vaultAndroid:`${ANDROID_ICO} Android · 출시됨`,vaultIOS:`${APPLE_ICO} iOS · 출시 예정`,
-    learnStatus:"출시 예정",learnTagline:"마이크로 러닝 앱 · 스마트하게 배우기",
+    learnStatus:"출시됨",learnTagline:"마이크로 러닝 앱 · 스마트하게 배우기",
     learnDesc:"AI 개인화 학습 경로, 과학적 반복 학습, 엄선된 콘텐츠로 더 빠르게 배우고, 오래 기억하고, 매일 성장하세요.",
-    learnAndroid:`${ANDROID_ICO} Android · 출시 예정`,learnIOS:`${APPLE_ICO} iOS · 출시 예정`,
+    learnAndroid:`${ANDROID_ICO} Android · 출시됨`,learnIOS:`${APPLE_ICO} iOS · 출시 예정`,
     aboutTitle:'<span style="color:var(--teal)">열정</span>으로 만든',
     aboutText:'저희는 베트남에 기반을 둔 작지만 집중력 높은 팀입니다. 모든 제품은 하나의 질문에서 시작합니다: <strong>사용자가 진정으로 필요한 것은 무엇인가?</strong> 최고의 기술은 <strong>배경 속으로 사라지고</strong> — 순수한 경험과 진정한 가치만 남긴다고 믿습니다.',
     p1name:"모바일 게임",p1desc:"가벼운 게임, 세련된 UI",
@@ -421,9 +421,9 @@ const T={
     vaultStatus:"Đang hoạt động",vaultTagline:"Hub mini game · Nhà giả kim & Thế giới hiện đại",
     vaultDesc:"Thế giới giải trí kết hợp giữa thuật giả kim huyền bí và nhịp sống đô thị hiện đại. Mini game đa dạng, gameplay nhẹ nhàng — hoàn hảo cho mọi khoảnh khắc thư giãn.",
     vaultAndroid:`${ANDROID_ICO} Android · Live`,vaultIOS:`${APPLE_ICO} iOS · Sắp ra mắt`,
-    learnStatus:"Sắp ra mắt",learnTagline:"Micro-learning app · Học thông minh, tiến xa hơn",
+    learnStatus:"Đang hoạt động",learnTagline:"Micro-learning app · Học thông minh, tiến xa hơn",
     learnDesc:"Ứng dụng học tập thế hệ mới với AI cá nhân hóa lộ trình, hệ thống spaced repetition khoa học và nội dung được chắt lọc — học nhanh, nhớ lâu, tiến bộ mỗi ngày.",
-    learnAndroid:`${ANDROID_ICO} Android · Sắp ra mắt`,learnIOS:`${APPLE_ICO} iOS · Sắp ra mắt`,
+    learnAndroid:`${ANDROID_ICO} Android · Live`,learnIOS:`${APPLE_ICO} iOS · Sắp ra mắt`,
     aboutTitle:'Được tạo ra với <span style="color:var(--teal)">nhiệt huyết</span>',
     aboutText:'Chúng tôi là đội ngũ nhỏ nhưng tập trung cao độ, đặt trụ sở tại Việt Nam. Mỗi sản phẩm bắt đầu từ câu hỏi: <strong>Người dùng thực sự cần gì?</strong> Chúng tôi tin rằng công nghệ tốt nhất là công nghệ <strong>biến mất vào nền</strong> — để lại chỉ trải nghiệm thuần túy và giá trị thực.',
     p1name:"Mobile Gaming",p1desc:"Game nhẹ, UI tinh tế",
@@ -444,9 +444,9 @@ const T={
     vaultStatus:"เปิดให้บริการ",vaultTagline:"มินิเกมฮับ · การเล่นแร่แปรธาตุ & โลกสมัยใหม่",
     vaultDesc:"โลกบันเทิงที่ผสมผสานระหว่างการเล่นแร่แปรธาตุลึกลับกับชีวิตเมืองสมัยใหม่ มินิเกมหลากหลาย เล่นง่าย — เหมาะกับทุกช่วงเวลาพักผ่อน",
     vaultAndroid:`${ANDROID_ICO} Android · เปิดแล้ว`,vaultIOS:`${APPLE_ICO} iOS · เร็วๆ นี้`,
-    learnStatus:"เร็วๆ นี้",learnTagline:"แอปเรียนรู้แบบไมโคร · เรียนฉลาด ก้าวไกล",
+    learnStatus:"เปิดให้บริการ",learnTagline:"แอปเรียนรู้แบบไมโคร · เรียนฉลาด ก้าวไกล",
     learnDesc:"แอปการเรียนรู้ยุคใหม่ด้วย AI ปรับแต่งเส้นทางส่วนตัว ระบบทบทวนซ้ำตามหลักวิทยาศาสตร์ และเนื้อหาคัดสรร — เรียนเร็ว จำได้นาน พัฒนาทุกวัน",
-    learnAndroid:`${ANDROID_ICO} Android · เร็วๆ นี้`,learnIOS:`${APPLE_ICO} iOS · เร็วๆ นี้`,
+    learnAndroid:`${ANDROID_ICO} Android · เปิดแล้ว`,learnIOS:`${APPLE_ICO} iOS · เร็วๆ นี้`,
     aboutTitle:'สร้างด้วย<span style="color:var(--teal)">ความหลงใหล</span>',
     aboutText:'เราเป็นทีมเล็กแต่มีสมาธิสูง ตั้งอยู่ในเวียดนาม ทุกผลิตภัณฑ์เริ่มต้นจากคำถามง่ายๆ: <strong>ผู้ใช้ต้องการอะไรจริงๆ?</strong> เราเชื่อว่าเทคโนโลยีที่ดีที่สุดคือเทคโนโลยีที่ <strong>หายไปในพื้นหลัง</strong> — เหลือไว้เพียงประสบการณ์บริสุทธิ์และคุณค่าที่แท้จริง',
     p1name:"โมบายล์เกม",p1desc:"เกมเบา UI ประณีต",
