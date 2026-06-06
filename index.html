@@ -484,9 +484,12 @@ function applyLang(lang){
 
 document.getElementById('langSelect').addEventListener('change',function(){
   applyLang(this.value);
+  localStorage.setItem('ml_lang',this.value);
 });
 
-applyLang('en');
+const savedLang=localStorage.getItem('ml_lang')||'en';
+document.getElementById('langSelect').value=savedLang;
+applyLang(savedLang);
 
 // Stars
 const starsEl=document.getElementById('stars');
