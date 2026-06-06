@@ -423,9 +423,11 @@ footer strong{color:var(--text)}
   </main>
 </div>
 
-<footer>© 2025 <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
+<footer>© 2025–<span id="yr"></span> <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
 
 <script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
 // Active TOC highlight on scroll
 const sections=document.querySelectorAll('.section[id]');
 const tocLinks=document.querySelectorAll('.toc-list a');
