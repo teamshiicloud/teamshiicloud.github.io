@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy & Terms of Service — Mercury Labs Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -18,9 +20,8 @@ html{scroll-behavior:smooth}
 body{background:var(--dark);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden;min-height:100vh}
 
 /* BG effects */
-.stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d,3s) ease-in-out infinite alternate}
-@keyframes twinkle{from{opacity:0.05}to{opacity:var(--o,0.6)}}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;background:radial-gradient(2px 2px at 20px 30px,#eee,rgba(238,238,238,0.2) 0.5px,transparent 0.5px),radial-gradient(2px 2px at 60px 70px,#fff,rgba(255,255,255,0.3) 1px,transparent 1px),radial-gradient(1px 1px at 50px 50px,#ddd,rgba(221,221,221,0.2) 0.5px,transparent 0.5px),radial-gradient(1px 1px at 130px 80px,#fff,rgba(255,255,255,0.3) 0.5px,transparent 0.5px);background-repeat:repeat;background-size:200px 200px;opacity:0.5}
+.star{display:none}
 .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 .orb1{width:500px;height:500px;background:var(--blue-glow);top:-100px;right:-100px;animation:drift 12s ease-in-out infinite alternate}
 .orb2{width:400px;height:400px;background:var(--teal-glow);bottom:0;left:-100px;animation:drift 14s ease-in-out infinite alternate-reverse}
@@ -425,24 +426,13 @@ footer strong{color:var(--text)}
 <footer>© 2025 <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
 
 <script>
-// Stars
-const se=document.getElementById('stars');
-for(let i=0;i<60;i++){
-  const s=document.createElement('div');s.className='star';
-  const z=Math.random()*2+0.4;
-  s.style.cssText=`width:${z}px;height:${z}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${2+Math.random()*4}s;--o:${0.2+Math.random()*0.6};animation-delay:${Math.random()*4}s`;
-  se.appendChild(s);
-}
-
 // Active TOC highlight on scroll
 const sections=document.querySelectorAll('.section[id]');
 const tocLinks=document.querySelectorAll('.toc-list a');
 function onScroll(){
   let cur='';
   sections.forEach(s=>{if(s.getBoundingClientRect().top<=100)cur=s.id});
-  tocLinks.forEach(a=>{
-    a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
-  });
+  tocLinks.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
 }
 window.addEventListener('scroll',onScroll,{passive:true});
 </script>
