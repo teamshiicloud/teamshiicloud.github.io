@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  width:1200px;height:630px;overflow:hidden;
+  background:#06101E;
+  font-family:'DM Sans','Segoe UI',sans-serif;
+  position:relative;
+}
+
+/* Orbs */
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.orb1{width:500px;height:500px;background:rgba(24,95,165,0.25);top:-150px;right:-100px}
+.orb2{width:400px;height:400px;background:rgba(93,202,165,0.15);bottom:-100px;left:-80px}
+.orb3{width:280px;height:280px;background:rgba(239,159,39,0.12);top:200px;left:480px}
+
+/* Stars */
+.stars{position:absolute;inset:0;
+  background:
+    radial-gradient(1.5px 1.5px at 80px 60px,rgba(255,255,255,0.7),transparent),
+    radial-gradient(1px 1px at 200px 150px,rgba(255,255,255,0.5),transparent),
+    radial-gradient(2px 2px at 350px 80px,rgba(255,255,255,0.6),transparent),
+    radial-gradient(1px 1px at 500px 200px,rgba(255,255,255,0.4),transparent),
+    radial-gradient(1.5px 1.5px at 700px 50px,rgba(255,255,255,0.7),transparent),
+    radial-gradient(1px 1px at 900px 120px,rgba(255,255,255,0.5),transparent),
+    radial-gradient(2px 2px at 1050px 80px,rgba(255,255,255,0.6),transparent),
+    radial-gradient(1px 1px at 1150px 200px,rgba(255,255,255,0.4),transparent),
+    radial-gradient(1.5px 1.5px at 150px 350px,rgba(255,255,255,0.5),transparent),
+    radial-gradient(1px 1px at 400px 420px,rgba(255,255,255,0.3),transparent),
+    radial-gradient(2px 2px at 650px 500px,rgba(255,255,255,0.5),transparent),
+    radial-gradient(1px 1px at 850px 380px,rgba(255,255,255,0.4),transparent),
+    radial-gradient(1.5px 1.5px at 1100px 450px,rgba(255,255,255,0.6),transparent);
+}
+
+/* Main layout */
+.wrap{position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 80px}
+
+/* Logo row */
+.logo-row{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.logo-mark{
+  width:56px;height:56px;border-radius:12px;
+  background:linear-gradient(135deg,#185FA5,#5DCAA5);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Sora','Segoe UI',sans-serif;
+  font-weight:800;font-size:20px;color:#fff;letter-spacing:-1px;
+  flex-shrink:0;
+}
+.logo-name{font-family:'Sora','Segoe UI',sans-serif;font-weight:700;font-size:20px;color:#E8F0FB;letter-spacing:-0.3px}
+.logo-name span{color:#5DCAA5}
+.eyebrow{margin-left:auto;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#EF9F27;font-weight:600;padding:5px 14px;border-radius:20px;border:0.5px solid rgba(239,159,39,0.4);background:rgba(239,159,39,0.08)}
+
+/* Headline */
+.headline{font-family:'Sora','Segoe UI',sans-serif;font-weight:800;font-size:58px;line-height:1.05;letter-spacing:-2px;margin-bottom:20px}
+.headline .line1{display:block;color:#E8F0FB}
+.headline .line2{display:block;background:linear-gradient(90deg,#3A82C4,#5DCAA5,#EF9F27);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* Sub */
+.sub{font-size:18px;color:#7A9BC4;font-weight:300;line-height:1.6;max-width:600px;margin-bottom:44px}
+.sub strong{color:#E8F0FB;font-weight:500}
+
+/* App chips */
+.apps{display:flex;gap:14px}
+.app-chip{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 20px;border-radius:14px;
+  border:0.5px solid rgba(93,202,165,0.25);
+  background:rgba(12,26,46,0.8);
+}
+.app-chip.vault{border-color:rgba(239,159,39,0.3);background:rgba(42,26,0,0.5)}
+.app-chip.learn{border-color:rgba(93,202,165,0.3);background:rgba(0,26,20,0.5)}
+.chip-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Sora','Segoe UI',sans-serif;font-weight:800;font-size:14px}
+.icon-vault{background:linear-gradient(135deg,#2A1A00,#5C3A00);color:#EF9F27;border:0.5px solid rgba(239,159,39,0.4)}
+.icon-learn{background:linear-gradient(135deg,#001A14,#003D2E);color:#5DCAA5;border:0.5px solid rgba(93,202,165,0.4)}
+.chip-info{}
+.chip-name{font-family:'Sora','Segoe UI',sans-serif;font-weight:700;font-size:15px;color:#E8F0FB;margin-bottom:2px}
+.chip-tag{font-size:11px;color:#7A9BC4;font-weight:300}
+.chip-live{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#5DCAA5;margin-left:8px}
+.live-dot{width:5px;height:5px;border-radius:50%;background:#5DCAA5}
+
+/* URL */
+.url-row{position:absolute;bottom:36px;right:80px;font-size:14px;color:rgba(122,155,196,0.6);letter-spacing:0.5px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="wrap">
+
+  <div class="logo-row">
+    <div class="logo-mark">ML</div>
+    <span class="logo-name">Mercury<span>Labs</span> Studio</span>
+    <span class="eyebrow">Est. 2025</span>
+  </div>
+
+  <div class="headline">
+    <span class="line1">We Build Apps</span>
+    <span class="line2">People Love to Use</span>
+  </div>
+
+  <p class="sub">From <strong>entertainment games</strong> to <strong>AI-powered learning</strong> — crafted with passion in Vietnam 🇻🇳</p>
+
+  <div class="apps">
+    <div class="app-chip vault">
+      <div class="chip-icon icon-vault">MV</div>
+      <div class="chip-info">
+        <div class="chip-name">Mercury Vault <span class="chip-live"><span class="live-dot"></span>Live</span></div>
+        <div class="chip-tag">Mini game hub · Android & iOS</div>
+      </div>
+    </div>
+    <div class="app-chip learn">
+      <div class="chip-icon icon-learn">ML</div>
+      <div class="chip-info">
+        <div class="chip-name">MercuryLearn <span class="chip-live"><span class="live-dot"></span>Live</span></div>
+        <div class="chip-tag">Micro-learning app · Android</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="url-row">mercurylabsstudio.com</div>
+
+</body>
+</html>
