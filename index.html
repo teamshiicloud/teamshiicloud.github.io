@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mercury Labs Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Thai:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Thai:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -464,6 +467,7 @@ const IDS=['eyebrow','h1line1','h1line2','heroSub','ctaExplore','ctaContact','sc
 const KEYS=['eyebrow','h1l1','h1l2','heroSub','ctaExplore','ctaContact','scrollHint','secLabel','secAboutLabel','secContactLabel','vaultStatus','vaultTagline','vaultDesc','vaultAndroid','vaultIOS','learnStatus','learnTagline','learnDesc','learnAndroid','learnIOS','aboutTitle','aboutText','p1name','p1desc','p2name','p2desc','p3name','p3desc','p4name','p4desc','contactTitle','contactSub','footer'];
 
 function applyLang(lang){
+  loadLanguageFonts(lang);
   const d=T[lang];
   IDS.forEach((id,i)=>{
     const el=document.getElementById(id);
@@ -493,9 +497,20 @@ for(let i=0;i<90;i++){
   starsEl.appendChild(s);
 }
 
-// Intersection observer
+// Intersection observer - lazy load fade-up animations
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.12});
 document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+// Lazy load non-English language fonts when language changes
+function loadLanguageFonts(lang){
+  if(lang!=='en'&&!window.langFontsLoaded){
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Thai:wght@300;400;700&display=swap';
+    document.head.appendChild(link);
+    window.langFontsLoaded=true;
+  }
+}
 </script>
 </body>
 </html>
