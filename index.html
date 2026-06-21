@@ -33,7 +33,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Thai:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -285,18 +284,18 @@ footer span{color:var(--text);font-weight:500}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow"><span class="dot"></span><span id="eyebrow"></span></div>
-  <h1><span class="line1" id="h1line1"></span><span class="line2" id="h1line2"></span></h1>
-  <p class="hero-sub" id="heroSub"></p>
+  <div class="hero-eyebrow"><span class="dot"></span><span id="eyebrow">Mercury Labs Studio · Est. 2025</span></div>
+  <h1><span class="line1" id="h1line1">We Build Apps</span><span class="line2" id="h1line2">People Love to Use</span></h1>
+  <p class="hero-sub" id="heroSub"><strong>Mercury Labs Studio</strong> is a mobile tech studio focused on user experience — from entertainment games to learning apps, we craft products that are <strong>refined, delightful, and meaningful</strong>.</p>
   <div class="cta-group">
-    <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" id="ctaExplore"></button>
-    <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" id="ctaContact"></button>
+    <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" id="ctaExplore">Explore Products</button>
+    <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" id="ctaContact">Contact Us</button>
   </div>
-  <div class="scroll-hint"><div class="scroll-line"></div><span id="scrollHint"></span></div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span id="scrollHint">Scroll Down</span></div>
 </section>
 
 <!-- PRODUCTS SECTION LABEL -->
-<div class="section-divider fade-up"><span class="section-label" id="secLabel"></span></div>
+<div class="section-divider fade-up"><span class="section-label" id="secLabel">Our Products</span></div>
 
 <!-- PRODUCTS -->
 <section class="products" id="products">
@@ -306,15 +305,15 @@ footer span{color:var(--text);font-weight:500}
       <div class="glow-line"></div>
       <div class="card-header">
         <div class="app-icon icon-vault">MV</div>
-        <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus"></span></div>
+        <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus">Live Now</span></div>
       </div>
       <div class="card-body">
         <div class="card-name">Mercury Vault</div>
-        <div class="card-tagline" id="vaultTagline"></div>
-        <div class="card-desc" id="vaultDesc"></div>
+        <div class="card-tagline" id="vaultTagline">Mini game hub · Alchemy & Modern World</div>
+        <div class="card-desc" id="vaultDesc">A vibrant entertainment world blending mystical alchemy with modern urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.</div>
         <div class="platform-row">
-          <a class="platform-chip chip-live" id="vaultAndroid" href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"></a>
-          <a class="platform-chip chip-live" id="vaultIOS" href="https://apps.apple.com/us/app/mercuryvault-pro/id6775095921" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"></a>
+          <a class="platform-chip chip-live" id="vaultAndroid" href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg> Android · Live</a>
+          <a class="platform-chip chip-live" id="vaultIOS" href="https://apps.apple.com/us/app/mercuryvault-pro/id6775095921" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> iOS · Live</a>
         </div>
       </div>
     </div>
@@ -323,15 +322,15 @@ footer span{color:var(--text);font-weight:500}
       <div class="glow-line"></div>
       <div class="card-header">
         <div class="app-icon icon-learn">ML</div>
-        <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus"></span></div>
+        <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus">Live Now</span></div>
       </div>
       <div class="card-body">
         <div class="card-name">MercuryLearn</div>
-        <div class="card-tagline" id="learnTagline"></div>
-        <div class="card-desc" id="learnDesc"></div>
+        <div class="card-tagline" id="learnTagline">Micro-learning app · Learn smarter, go further</div>
+        <div class="card-desc" id="learnDesc">Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.</div>
         <div class="platform-row">
-          <a class="platform-chip chip-live" id="learnAndroid" href="https://play.google.com/store/apps/details?id=com.mercurylearn.app" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"></a>
-          <span class="platform-chip chip-soon" id="learnIOS"></span>
+          <a class="platform-chip chip-live" id="learnAndroid" href="https://play.google.com/store/apps/details?id=com.mercurylearn.app" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg> Android · Live</a>
+          <span class="platform-chip chip-soon" id="learnIOS">iOS · Coming Soon</span>
         </div>
       </div>
     </div>
@@ -339,24 +338,24 @@ footer span{color:var(--text);font-weight:500}
 </section>
 
 <!-- ABOUT -->
-<div class="section-divider fade-up"><span class="section-label" id="secAboutLabel"></span></div>
+<div class="section-divider fade-up"><span class="section-label" id="secAboutLabel">About Us</span></div>
 <section class="about fade-up" id="about">
-  <div class="about-title" id="aboutTitle"></div>
-  <p class="about-text" id="aboutText"></p>
+  <div class="about-title" id="aboutTitle">Built with <span style="color:var(--teal)">Passion</span></div>
+  <p class="about-text" id="aboutText">We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.</p>
   <div class="pillars">
-    <div class="pillar fade-up"><div class="pillar-icon">🎮</div><div class="pillar-name" id="p1name"></div><div class="pillar-desc" id="p1desc"></div></div>
-    <div class="pillar fade-up" style="transition-delay:0.1s"><div class="pillar-icon">📚</div><div class="pillar-name" id="p2name"></div><div class="pillar-desc" id="p2desc"></div></div>
-    <div class="pillar fade-up" style="transition-delay:0.2s"><div class="pillar-icon">⚡</div><div class="pillar-name" id="p3name"></div><div class="pillar-desc" id="p3desc"></div></div>
-    <div class="pillar fade-up" style="transition-delay:0.3s"><div class="pillar-icon">🌏</div><div class="pillar-name" id="p4name"></div><div class="pillar-desc" id="p4desc"></div></div>
+    <div class="pillar fade-up"><div class="pillar-icon">🎮</div><div class="pillar-name" id="p1name">Mobile Gaming</div><div class="pillar-desc" id="p1desc">Light games, refined UI</div></div>
+    <div class="pillar fade-up" style="transition-delay:0.1s"><div class="pillar-icon">📚</div><div class="pillar-name" id="p2name">EdTech</div><div class="pillar-desc" id="p2desc">AI-powered smart learning</div></div>
+    <div class="pillar fade-up" style="transition-delay:0.2s"><div class="pillar-icon">⚡</div><div class="pillar-name" id="p3name">Performance</div><div class="pillar-desc" id="p3desc">Fast, smooth, reliable</div></div>
+    <div class="pillar fade-up" style="transition-delay:0.3s"><div class="pillar-icon">🌏</div><div class="pillar-name" id="p4name">Global Reach</div><div class="pillar-desc" id="p4desc">VI · EN · TH · JA · KO</div></div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<div class="section-divider fade-up"><span class="section-label" id="secContactLabel"></span></div>
+<div class="section-divider fade-up"><span class="section-label" id="secContactLabel">Get in Touch</span></div>
 <section class="contact fade-up" id="contact">
   <div class="contact-card">
-    <div class="contact-title" id="contactTitle"></div>
-    <p class="contact-sub" id="contactSub"></p>
+    <div class="contact-title" id="contactTitle">Let's Connect</div>
+    <p class="contact-sub" id="contactSub">Have a question, partnership idea, or just want to say hello? Reach out — we'd love to hear from you.</p>
     <a href="mailto:hi@mercurylabsstudio.com" class="email-link">
       <span class="email-icon">✉️</span>
       hi@mercurylabsstudio.com
@@ -366,7 +365,7 @@ footer span{color:var(--text);font-weight:500}
 </section>
 
 <!-- FOOTER -->
-<footer id="footerText"></footer>
+<footer id="footerText">© 2025–2026 <span>Mercury Labs Studio</span> · Crafted with passion in Vietnam 🇻🇳</footer>
 
 <script>
 const ANDROID_ICO=`<svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg>`;
