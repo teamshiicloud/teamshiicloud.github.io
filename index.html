@@ -1,545 +1,1445 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mercury Labs Studio — Mobile Games & Apps</title>
-<meta name="description" content="Mercury Labs Studio is a mobile tech studio crafting refined, delightful apps — from entertainment games to AI-powered learning tools.">
-<meta name="keywords" content="Mercury Labs Studio, mobile games, learning app, MercuryVault, MercuryLearn, Vietnam app studio">
-<meta name="author" content="Mercury Labs Studio">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mercurylabsstudio.com">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="prefetch" href="/terms-privacy.html">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VFPMPZKQP"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-6VFPMPZKQP');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercury Labs Studio — Mobile Games & Apps</title>
+  <meta name="description"
+    content="Mercury Labs Studio is a mobile tech studio crafting refined, delightful apps — from entertainment games to AI-powered learning tools.">
+  <meta name="keywords"
+    content="Mercury Labs Studio, mobile games, learning app, MercuryVault, MercuryLearn, Vietnam app studio">
+  <meta name="author" content="Mercury Labs Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mercurylabsstudio.com">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="prefetch" href="/terms-privacy.html">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VFPMPZKQP"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date()); gtag('config', 'G-6VFPMPZKQP');</script>
 
-<!-- Open Graph (Facebook, Zalo, LinkedIn) -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mercurylabsstudio.com">
-<meta property="og:title" content="Mercury Labs Studio — Mobile Games & Apps">
-<meta property="og:description" content="Mercury Labs Studio is a mobile tech studio crafting refined, delightful apps — from entertainment games to AI-powered learning tools.">
-<meta property="og:image" content="https://mercurylabsstudio.com/og-image.png">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Mercury Labs Studio">
+  <!-- Open Graph (Facebook, Zalo, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mercurylabsstudio.com">
+  <meta property="og:title" content="Mercury Labs Studio — Mobile Games & Apps">
+  <meta property="og:description"
+    content="Mercury Labs Studio is a mobile tech studio crafting refined, delightful apps — from entertainment games to AI-powered learning tools.">
+  <meta property="og:image" content="https://mercurylabsstudio.com/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Mercury Labs Studio">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://mercurylabsstudio.com">
-<meta name="twitter:title" content="Mercury Labs Studio — Mobile Games & Apps">
-<meta name="twitter:description" content="Mercury Labs Studio is a mobile tech studio crafting refined, delightful apps — from entertainment games to AI-powered learning tools.">
-<meta name="twitter:image" content="https://mercurylabsstudio.com/og-image.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mercurylabsstudio.com">
+  <meta name="twitter:title" content="Mercury Labs Studio — Mobile Games & Apps">
+  <meta name="twitter:description"
+    content="Mercury Labs Studio is a mobile tech studio crafting refined, delightful apps — from entertainment games to AI-powered learning tools.">
+  <meta name="twitter:image" content="https://mercurylabsstudio.com/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --blue:#185FA5;--blue-light:#3A82C4;--blue-glow:rgba(24,95,165,0.18);
-  --teal:#5DCAA5;--teal-light:#7ED8B8;--teal-glow:rgba(93,202,165,0.15);
-  --amber:#EF9F27;--amber-glow:rgba(239,159,39,0.2);
-  --dark:#06101E;--dark2:#0C1A2E;--dark3:#112240;
-  --text:#E8F0FB;--muted:#7A9BC4;--border:rgba(93,202,165,0.15);
-}
-html{scroll-behavior:smooth}
-body{background:var(--dark);font-family:'DM Sans','Noto Sans JP','Noto Sans KR','Noto Sans Thai',sans-serif;color:var(--text);overflow-x:hidden;min-height:100vh}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-.stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d,3s) ease-in-out infinite alternate}
-@keyframes twinkle{from{opacity:0.05}to{opacity:var(--o,0.6)}}
-.orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
-.orb1{width:500px;height:500px;background:var(--blue-glow);top:-100px;right:-100px;animation:drift 12s ease-in-out infinite alternate}
-.orb2{width:400px;height:400px;background:var(--teal-glow);bottom:0;left:-100px;animation:drift 14s ease-in-out infinite alternate-reverse}
-.orb3{width:300px;height:300px;background:var(--amber-glow);top:40%;left:40%;animation:drift 10s ease-in-out infinite alternate}
-@keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(30px,20px)}}
+    :root {
+      --blue: #185FA5;
+      --blue-light: #3A82C4;
+      --blue-glow: rgba(24, 95, 165, 0.18);
+      --teal: #5DCAA5;
+      --teal-light: #7ED8B8;
+      --teal-glow: rgba(93, 202, 165, 0.15);
+      --amber: #EF9F27;
+      --amber-glow: rgba(239, 159, 39, 0.2);
+      --dark: #06101E;
+      --dark2: #0C1A2E;
+      --dark3: #112240;
+      --text: #E8F0FB;
+      --muted: #7A9BC4;
+      --border: rgba(93, 202, 165, 0.15);
+    }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(6,16,30,0.75);backdrop-filter:blur(20px);border-bottom:0.5px solid var(--border)}
-.nav-mid{display:flex;align-items:center;gap:6px}
-.nav-link{font-size:13px;font-weight:400;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:7px;transition:color 0.2s,background 0.2s;white-space:nowrap}
-.nav-link:hover{color:var(--text);background:rgba(255,255,255,0.06)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-mark{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:#fff;letter-spacing:-1px;flex-shrink:0}
-.logo-name{font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:var(--text);white-space:nowrap}
-.logo-name span{color:var(--teal)}
+    html {
+      scroll-behavior: smooth
+    }
 
-/* Language select */
-.lang-select-wrap{position:relative;display:flex;align-items:center}
-.lang-select-wrap svg{position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:0.5}
-#langSelect{
-  appearance:none;-webkit-appearance:none;
-  background:rgba(255,255,255,0.06);
-  border:0.5px solid rgba(255,255,255,0.15);
-  color:var(--text);
-  font-family:'DM Sans',sans-serif;
-  font-size:13px;font-weight:500;
-  padding:7px 34px 7px 14px;
-  border-radius:8px;
-  cursor:pointer;
-  outline:none;
-  transition:border-color 0.2s,background 0.2s;
-}
-#langSelect:hover{border-color:rgba(93,202,165,0.4);background:rgba(93,202,165,0.07)}
-#langSelect:focus{border-color:var(--teal)}
-#langSelect option{background:#0C1A2E;color:var(--text)}
+    body {
+      background: var(--dark);
+      font-family: 'DM Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Thai', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh
+    }
 
-/* HERO */
-.hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:28px;padding:7px 18px;border-radius:20px;border:0.5px solid rgba(239,159,39,0.3);background:rgba(239,159,39,0.07)}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--amber);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
-.hero h1{font-family:'Sora',sans-serif;font-size:clamp(36px,5.5vw,74px);font-weight:800;line-height:1.07;letter-spacing:-2px;margin-bottom:22px}
-.hero h1 .line1{display:block;color:var(--text)}
-.hero h1 .line2{display:block;background:linear-gradient(90deg,var(--blue-light),var(--teal),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite;background-size:200% auto}
-@keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
-.hero-sub{max-width:580px;font-size:16px;line-height:1.85;color:var(--muted);margin-bottom:44px;font-weight:300}
-.hero-sub strong{color:var(--text);font-weight:500}
-.cta-group{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:60px}
-.btn-primary{padding:13px 30px;border-radius:10px;font-size:14px;font-weight:600;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border:none;cursor:pointer;font-family:inherit;transition:transform 0.2s,box-shadow 0.2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(24,95,165,0.4)}
-.btn-ghost{padding:13px 30px;border-radius:10px;font-size:14px;font-weight:500;background:transparent;color:var(--text);border:0.5px solid rgba(255,255,255,0.2);cursor:pointer;font-family:inherit;transition:border-color 0.2s,background 0.2s}
-.btn-ghost:hover{border-color:var(--teal);background:rgba(93,202,165,0.07)}
-.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted);font-size:11px;letter-spacing:1px;text-transform:uppercase}
-.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--teal),transparent);animation:scroll-anim 2s ease-in-out infinite}
-@keyframes scroll-anim{0%,100%{opacity:0.3}50%{opacity:1}}
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden
+    }
 
-/* SECTION LABEL */
-.section-divider{position:relative;z-index:1;text-align:center;padding:16px 24px 12px}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:500}
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: #fff;
+      animation: twinkle var(--d, 3s) ease-in-out infinite alternate
+    }
 
-/* PRODUCTS */
-.products{position:relative;z-index:1;padding:16px 24px 72px;max-width:960px;margin:0 auto}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.product-card{border-radius:20px;border:0.5px solid var(--border);background:rgba(12,26,46,0.7);backdrop-filter:blur(20px);overflow:hidden;transition:transform 0.3s,border-color 0.3s;position:relative}
-.product-card:hover{transform:translateY(-6px)}
-.product-card.vault{border-color:rgba(239,159,39,0.25)}
-.product-card.vault:hover{border-color:rgba(239,159,39,0.5)}
-.product-card.learn{border-color:rgba(93,202,165,0.25)}
-.product-card.learn:hover{border-color:rgba(93,202,165,0.5)}
-.vault .glow-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--amber),transparent)}
-.learn .glow-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent)}
-.card-header{padding:24px 24px 0;display:flex;align-items:flex-start;justify-content:space-between}
-.app-icon{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;font-family:'Sora',sans-serif;flex-shrink:0}
-.icon-vault{background:linear-gradient(135deg,#2A1A00,#5C3A00);color:var(--amber);border:0.5px solid rgba(239,159,39,0.4)}
-.icon-learn{background:linear-gradient(135deg,#001A14,#003D2E);color:var(--teal);border:0.5px solid rgba(93,202,165,0.4)}
-.status-badge{font-size:10px;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;padding:5px 11px;border-radius:20px}
-.badge-live{background:rgba(93,202,165,0.12);color:var(--teal);border:0.5px solid rgba(93,202,165,0.4);display:flex;align-items:center;gap:5px}
-.badge-soon{background:rgba(239,159,39,0.1);color:var(--amber);border:0.5px solid rgba(239,159,39,0.35)}
-.live-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;flex-shrink:0}
-.card-body{padding:18px 24px 24px}
-.card-name{font-family:'Sora',sans-serif;font-weight:700;font-size:21px;margin-bottom:5px;letter-spacing:-0.4px}
-.card-tagline{font-size:12px;color:var(--muted);margin-bottom:13px;line-height:1.5;font-weight:300}
-.card-desc{font-size:13.5px;line-height:1.75;color:rgba(232,240,251,0.75);margin-bottom:18px}
-.platform-row{display:flex;gap:7px;flex-wrap:wrap}
-.platform-chip{font-size:12px;font-weight:500;padding:8px 14px;border-radius:20px;display:flex;align-items:center;gap:6px;cursor:pointer}
-.chip-live{background:rgba(24,95,165,0.2);color:#85B7EB;border:0.5px solid rgba(24,95,165,0.4)}
-.chip-live[href]:hover{background:rgba(24,95,165,0.35);border-color:#85B7EB;transform:translateY(-1px);transition:all 0.2s}
-.chip-soon{background:rgba(255,255,255,0.05);color:rgba(232,240,251,0.4);border:0.5px solid rgba(255,255,255,0.1)}
+    @keyframes twinkle {
+      from {
+        opacity: 0.05
+      }
 
-/* Platform icon SVGs */
-.ic-android{display:inline-block;vertical-align:middle;flex-shrink:0;padding:8px;background:#3DDC84;border-radius:8px;color:white}
-.ic-apple{display:inline-block;vertical-align:middle;flex-shrink:0;padding:8px;background:rgba(255,255,255,0.95);border-radius:8px;color:#000}
+      to {
+        opacity: var(--o, 0.6)
+      }
+    }
 
-/* ABOUT */
-.about{position:relative;z-index:1;padding:32px 24px 72px;max-width:780px;margin:0 auto;text-align:center}
-.about-title{font-family:'Sora',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:700;margin-bottom:18px;letter-spacing:-0.5px}
-.about-title span{color:var(--teal)}
-.about-text{font-size:15px;line-height:1.9;color:var(--muted);font-weight:300}
-.about-text strong{color:var(--text);font-weight:500}
-.pillars{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
-.pillar{padding:14px 20px;border-radius:12px;border:0.5px solid var(--border);background:rgba(12,26,46,0.5);text-align:center;transition:border-color 0.2s;min-width:120px}
-.pillar:hover{border-color:rgba(93,202,165,0.3)}
-.pillar-icon{font-size:20px;margin-bottom:7px}
-.pillar-name{font-weight:600;font-size:12px;margin-bottom:3px;color:var(--text)}
-.pillar-desc{font-size:11px;color:var(--muted);font-weight:300}
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0
+    }
 
-/* CONTACT */
-.contact{position:relative;z-index:1;padding:0 24px 80px;max-width:600px;margin:0 auto;text-align:center}
-.contact-card{border-radius:20px;border:0.5px solid rgba(24,95,165,0.3);background:rgba(12,26,46,0.7);backdrop-filter:blur(20px);padding:40px 36px;position:relative;overflow:hidden}
-.contact-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue-light),var(--teal),transparent)}
-.contact-title{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;margin-bottom:10px;letter-spacing:-0.4px}
-.contact-sub{font-size:14px;color:var(--muted);margin-bottom:28px;line-height:1.7;font-weight:300}
-.contact-sub strong{color:var(--text);font-weight:500}
-.email-link{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:13px 26px;border-radius:12px;
-  border:0.5px solid rgba(24,95,165,0.4);
-  background:rgba(24,95,165,0.1);
-  color:var(--blue-light);
-  text-decoration:none;font-size:15px;font-weight:500;
-  transition:all 0.2s;margin-bottom:20px;
-}
-.email-link:hover{background:rgba(24,95,165,0.2);border-color:var(--blue-light);transform:translateY(-2px)}
-.email-icon{font-size:18px}
-.contact-tagline{font-size:12px;color:var(--muted);font-style:italic;line-height:1.6}
+    .orb1 {
+      width: 500px;
+      height: 500px;
+      background: var(--blue-glow);
+      top: -100px;
+      right: -100px;
+      animation: drift 12s ease-in-out infinite alternate
+    }
 
-/* FOOTER */
-footer{position:relative;z-index:1;text-align:center;padding:28px 24px;border-top:0.5px solid var(--border);font-size:12px;color:var(--muted);font-weight:300}
-footer span{color:var(--text);font-weight:500}
+    .orb2 {
+      width: 400px;
+      height: 400px;
+      background: var(--teal-glow);
+      bottom: 0;
+      left: -100px;
+      animation: drift 14s ease-in-out infinite alternate-reverse
+    }
 
-/* ANIMATION */
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
-.fade-up.visible{opacity:1;transform:none}
+    .orb3 {
+      width: 300px;
+      height: 300px;
+      background: var(--amber-glow);
+      top: 40%;
+      left: 40%;
+      animation: drift 10s ease-in-out infinite alternate
+    }
 
-/* ── RESPONSIVE ── */
-/* Tablet */
-@media(max-width:768px){
-  nav{padding:12px 20px;gap:12px}
-  .logo-name{font-size:13px}
-  .nav-mid{gap:2px}
-  .nav-link{font-size:12px;padding:5px 8px}
-  #langSelect{font-size:12px;padding:6px 28px 6px 10px}
-  .hero{padding:90px 20px 70px}
-  .hero h1{letter-spacing:-1px}
-  .hero-sub{font-size:15px}
-  .cta-group{gap:10px}
-  .btn-primary,.btn-ghost{padding:12px 22px;font-size:13px}
-  .products{padding:12px 20px 56px}
-  .products-grid{grid-template-columns:1fr;gap:18px}
-  .about{padding:24px 20px 56px}
-  .contact{padding:0 20px 64px}
-  .contact-card{padding:32px 24px}
-  .pillars{gap:10px}
-  .pillar{min-width:100px;padding:12px 14px}
-}
+    @keyframes drift {
+      0% {
+        transform: translate(0, 0)
+      }
 
-/* Mobile */
-@media(max-width:480px){
-  /* Nav — hamburger-free: collapse nav links, keep logo + lang */
-  nav{padding:10px 16px;flex-wrap:wrap;gap:8px}
-  .nav-mid{order:3;width:100%;justify-content:center;gap:0;border-top:0.5px solid var(--border);margin-top:4px;padding-top:6px}
-  .nav-link{font-size:11.5px;padding:5px 9px}
-  .logo-name{display:none} /* keep icon only on very small */
-  .lang-select-wrap{margin-left:auto}
-  #langSelect{font-size:11.5px;padding:5px 26px 5px 9px}
+      100% {
+        transform: translate(30px, 20px)
+      }
+    }
 
-  /* Hero */
-  .hero{padding:130px 16px 60px}
-  .hero-eyebrow{font-size:10px;letter-spacing:1.5px;padding:6px 14px}
-  .hero h1{letter-spacing:-0.5px;margin-bottom:18px}
-  .hero-sub{font-size:14px;line-height:1.75;margin-bottom:36px}
-  .cta-group{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:48px}
-  .btn-primary,.btn-ghost{width:100%;text-align:center;padding:14px 20px;font-size:14px}
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: rgba(6, 16, 30, 0.75);
+      backdrop-filter: blur(20px);
+      border-bottom: 0.5px solid var(--border)
+    }
 
-  /* Cards */
-  .products{padding:8px 16px 48px}
-  .card-header{padding:20px 20px 0}
-  .card-body{padding:14px 20px 20px}
-  .card-name{font-size:19px}
-  .platform-row{flex-direction:column;gap:6px}
-  .platform-chip{justify-content:center}
+    .nav-mid {
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
 
-  /* About */
-  .about{padding:20px 16px 48px}
-  .pillars{flex-direction:column;align-items:center;gap:10px}
-  .pillar{width:100%;max-width:280px}
+    .nav-link {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 7px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap
+    }
 
-  /* Contact */
-  .contact{padding:0 16px 56px}
-  .contact-card{padding:28px 18px}
-  .contact-title{font-size:18px}
-  .email-link{font-size:13.5px;padding:12px 18px;width:100%;justify-content:center}
+    .nav-link:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06)
+    }
 
-  /* Orbs — reduce on mobile for perf */
-  .orb1{width:300px;height:300px}
-  .orb2{width:250px;height:250px}
-  .orb3{width:180px;height:180px}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none
+    }
 
-  footer{font-size:11px;padding:22px 16px}
-}
-</style>
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: #fff;
+      letter-spacing: -1px;
+      flex-shrink: 0
+    }
+
+    .logo-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--text);
+      white-space: nowrap
+    }
+
+    .logo-name span {
+      color: var(--teal)
+    }
+
+    /* Language select */
+    .lang-select-wrap {
+      position: relative;
+      display: flex;
+      align-items: center
+    }
+
+    .lang-select-wrap svg {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      opacity: 0.5
+    }
+
+    #langSelect {
+      appearance: none;
+      -webkit-appearance: none;
+      background: rgba(255, 255, 255, 0.06);
+      border: 0.5px solid rgba(255, 255, 255, 0.15);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 34px 7px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    #langSelect:hover {
+      border-color: rgba(93, 202, 165, 0.4);
+      background: rgba(93, 202, 165, 0.07)
+    }
+
+    #langSelect:focus {
+      border-color: var(--teal)
+    }
+
+    #langSelect option {
+      background: #0C1A2E;
+      color: var(--text)
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 24px 80px
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 600;
+      margin-bottom: 28px;
+      padding: 7px 18px;
+      border-radius: 20px;
+      border: 0.5px solid rgba(239, 159, 39, 0.3);
+      background: rgba(239, 159, 39, 0.07)
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.7)
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(36px, 5.5vw, 74px);
+      font-weight: 800;
+      line-height: 1.07;
+      letter-spacing: -2px;
+      margin-bottom: 22px
+    }
+
+    .hero h1 .line1 {
+      display: block;
+      color: var(--text)
+    }
+
+    .hero h1 .line2 {
+      display: block;
+      background: linear-gradient(90deg, var(--blue-light), var(--teal), var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 5s linear infinite;
+      background-size: 200% auto
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 0% center
+      }
+
+      100% {
+        background-position: 200% center
+      }
+    }
+
+    .hero-sub {
+      max-width: 580px;
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 44px;
+      font-weight: 300
+    }
+
+    .hero-sub strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 60px
+    }
+
+    .btn-primary {
+      padding: 13px 30px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.2s, box-shadow 0.2s
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(24, 95, 165, 0.4)
+    }
+
+    .btn-ghost {
+      padding: 13px 30px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      background: transparent;
+      color: var(--text);
+      border: 0.5px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--teal);
+      background: rgba(93, 202, 165, 0.07)
+    }
+
+    .scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--teal), transparent);
+      animation: scroll-anim 2s ease-in-out infinite
+    }
+
+    @keyframes scroll-anim {
+
+      0%,
+      100% {
+        opacity: 0.3
+      }
+
+      50% {
+        opacity: 1
+      }
+    }
+
+    /* SECTION LABEL */
+    .section-divider {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 16px 24px 12px
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 500
+    }
+
+    /* PRODUCTS */
+    .products {
+      position: relative;
+      z-index: 1;
+      padding: 16px 24px 72px;
+      max-width: 960px;
+      margin: 0 auto
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px
+    }
+
+    .product-card {
+      border-radius: 20px;
+      border: 0.5px solid var(--border);
+      background: rgba(12, 26, 46, 0.7);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+      position: relative
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px)
+    }
+
+    .product-card.vault {
+      border-color: rgba(239, 159, 39, 0.25)
+    }
+
+    .product-card.vault:hover {
+      border-color: rgba(239, 159, 39, 0.5)
+    }
+
+    .product-card.learn {
+      border-color: rgba(93, 202, 165, 0.25)
+    }
+
+    .product-card.learn:hover {
+      border-color: rgba(93, 202, 165, 0.5)
+    }
+
+    .vault .glow-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--amber), transparent)
+    }
+
+    .learn .glow-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--teal), transparent)
+    }
+
+    .card-header {
+      padding: 24px 24px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between
+    }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      font-family: 'Sora', sans-serif;
+      flex-shrink: 0
+    }
+
+    .icon-vault {
+      background: linear-gradient(135deg, #2A1A00, #5C3A00);
+      color: var(--amber);
+      border: 0.5px solid rgba(239, 159, 39, 0.4)
+    }
+
+    .icon-learn {
+      background: linear-gradient(135deg, #001A14, #003D2E);
+      color: var(--teal);
+      border: 0.5px solid rgba(93, 202, 165, 0.4)
+    }
+
+    .status-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      border-radius: 20px
+    }
+
+    .badge-live {
+      background: rgba(93, 202, 165, 0.12);
+      color: var(--teal);
+      border: 0.5px solid rgba(93, 202, 165, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .badge-soon {
+      background: rgba(239, 159, 39, 0.1);
+      color: var(--amber);
+      border: 0.5px solid rgba(239, 159, 39, 0.35)
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse 2s infinite;
+      flex-shrink: 0
+    }
+
+    .card-body {
+      padding: 18px 24px 24px
+    }
+
+    .card-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 21px;
+      margin-bottom: 5px;
+      letter-spacing: -0.4px
+    }
+
+    .card-tagline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 13px;
+      line-height: 1.5;
+      font-weight: 300
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: rgba(232, 240, 251, 0.75);
+      margin-bottom: 18px
+    }
+
+    .platform-row {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap
+    }
+
+    .platform-chip {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer
+    }
+
+    .chip-live {
+      background: rgba(24, 95, 165, 0.2);
+      color: #85B7EB;
+      border: 0.5px solid rgba(24, 95, 165, 0.4)
+    }
+
+    .chip-live[href]:hover {
+      background: rgba(24, 95, 165, 0.35);
+      border-color: #85B7EB;
+      transform: translateY(-1px);
+      transition: all 0.2s
+    }
+
+    .chip-soon {
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(232, 240, 251, 0.4);
+      border: 0.5px solid rgba(255, 255, 255, 0.1)
+    }
+
+    /* Platform icon SVGs */
+    .ic-android {
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+      padding: 8px;
+      background: #3DDC84;
+      border-radius: 8px;
+      color: white
+    }
+
+    .ic-apple {
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      color: #000
+    }
+
+    /* ABOUT */
+    .about {
+      position: relative;
+      z-index: 1;
+      padding: 32px 24px 72px;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center
+    }
+
+    .about-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px
+    }
+
+    .about-title span {
+      color: var(--teal)
+    }
+
+    .about-text {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--muted);
+      font-weight: 300
+    }
+
+    .about-text strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .pillars {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 36px
+    }
+
+    .pillar {
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 0.5px solid var(--border);
+      background: rgba(12, 26, 46, 0.5);
+      text-align: center;
+      transition: border-color 0.2s;
+      min-width: 120px
+    }
+
+    .pillar:hover {
+      border-color: rgba(93, 202, 165, 0.3)
+    }
+
+    .pillar-icon {
+      font-size: 20px;
+      margin-bottom: 7px
+    }
+
+    .pillar-name {
+      font-weight: 600;
+      font-size: 12px;
+      margin-bottom: 3px;
+      color: var(--text)
+    }
+
+    .pillar-desc {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 300
+    }
+
+    /* CONTACT */
+    .contact {
+      position: relative;
+      z-index: 1;
+      padding: 0 24px 80px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center
+    }
+
+    .contact-card {
+      border-radius: 20px;
+      border: 0.5px solid rgba(24, 95, 165, 0.3);
+      background: rgba(12, 26, 46, 0.7);
+      backdrop-filter: blur(20px);
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue-light), var(--teal), transparent)
+    }
+
+    .contact-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.4px
+    }
+
+    .contact-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      font-weight: 300
+    }
+
+    .contact-sub strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: 12px;
+      border: 0.5px solid rgba(24, 95, 165, 0.4);
+      background: rgba(24, 95, 165, 0.1);
+      color: var(--blue-light);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s;
+      margin-bottom: 20px;
+    }
+
+    .email-link:hover {
+      background: rgba(24, 95, 165, 0.2);
+      border-color: var(--blue-light);
+      transform: translateY(-2px)
+    }
+
+    .email-icon {
+      font-size: 18px
+    }
+
+    .contact-tagline {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.6
+    }
+
+    /* FOOTER */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 28px 24px;
+      border-top: 0.5px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300
+    }
+
+    footer span {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    /* ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    /* ── RESPONSIVE ── */
+    /* Tablet */
+    @media(max-width:768px) {
+      nav {
+        padding: 12px 20px;
+        gap: 12px
+      }
+
+      .logo-name {
+        font-size: 13px
+      }
+
+      .nav-mid {
+        gap: 2px
+      }
+
+      .nav-link {
+        font-size: 12px;
+        padding: 5px 8px
+      }
+
+      #langSelect {
+        font-size: 12px;
+        padding: 6px 28px 6px 10px
+      }
+
+      .hero {
+        padding: 90px 20px 70px
+      }
+
+      .hero h1 {
+        letter-spacing: -1px
+      }
+
+      .hero-sub {
+        font-size: 15px
+      }
+
+      .cta-group {
+        gap: 10px
+      }
+
+      .btn-primary,
+      .btn-ghost {
+        padding: 12px 22px;
+        font-size: 13px
+      }
+
+      .products {
+        padding: 12px 20px 56px
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 18px
+      }
+
+      .about {
+        padding: 24px 20px 56px
+      }
+
+      .contact {
+        padding: 0 20px 64px
+      }
+
+      .contact-card {
+        padding: 32px 24px
+      }
+
+      .pillars {
+        gap: 10px
+      }
+
+      .pillar {
+        min-width: 100px;
+        padding: 12px 14px
+      }
+    }
+
+    /* Mobile */
+    @media(max-width:480px) {
+
+      /* Nav — hamburger-free: collapse nav links, keep logo + lang */
+      nav {
+        padding: 10px 16px;
+        flex-wrap: wrap;
+        gap: 8px
+      }
+
+      .nav-mid {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 0;
+        border-top: 0.5px solid var(--border);
+        margin-top: 4px;
+        padding-top: 6px
+      }
+
+      .nav-link {
+        font-size: 11.5px;
+        padding: 5px 9px
+      }
+
+      .logo-name {
+        display: none
+      }
+
+      /* keep icon only on very small */
+      .lang-select-wrap {
+        margin-left: auto
+      }
+
+      #langSelect {
+        font-size: 11.5px;
+        padding: 5px 26px 5px 9px
+      }
+
+      /* Hero */
+      .hero {
+        padding: 130px 16px 60px
+      }
+
+      .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        padding: 6px 14px
+      }
+
+      .hero h1 {
+        letter-spacing: -0.5px;
+        margin-bottom: 18px
+      }
+
+      .hero-sub {
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 36px
+      }
+
+      .cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 48px
+      }
+
+      .btn-primary,
+      .btn-ghost {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 14px
+      }
+
+      /* Cards */
+      .products {
+        padding: 8px 16px 48px
+      }
+
+      .card-header {
+        padding: 20px 20px 0
+      }
+
+      .card-body {
+        padding: 14px 20px 20px
+      }
+
+      .card-name {
+        font-size: 19px
+      }
+
+      .platform-row {
+        flex-direction: column;
+        gap: 6px
+      }
+
+      .platform-chip {
+        justify-content: center
+      }
+
+      /* About */
+      .about {
+        padding: 20px 16px 48px
+      }
+
+      .pillars {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px
+      }
+
+      .pillar {
+        width: 100%;
+        max-width: 280px
+      }
+
+      /* Contact */
+      .contact {
+        padding: 0 16px 56px
+      }
+
+      .contact-card {
+        padding: 28px 18px
+      }
+
+      .contact-title {
+        font-size: 18px
+      }
+
+      .email-link {
+        font-size: 13.5px;
+        padding: 12px 18px;
+        width: 100%;
+        justify-content: center
+      }
+
+      /* Orbs — reduce on mobile for perf */
+      .orb1 {
+        width: 300px;
+        height: 300px
+      }
+
+      .orb2 {
+        width: 250px;
+        height: 250px
+      }
+
+      .orb3 {
+        width: 180px;
+        height: 180px
+      }
+
+      footer {
+        font-size: 11px;
+        padding: 22px 16px
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="stars" id="stars"></div>
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
-<div class="orb orb3"></div>
+  <div class="stars" id="stars"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
 
-<!-- NAV -->
-<nav>
-  <a class="logo" href="#">
-    <div class="logo-mark">ML</div>
-    <span class="logo-name">Mercury<span>Labs</span> Studio</span>
-  </a>
-  <div class="nav-mid">
-    <a class="nav-link" href="#products" onclick="event.preventDefault();document.getElementById('products').scrollIntoView({behavior:'smooth'})" id="nm-products">Products</a>
-    <a class="nav-link" href="#contact" onclick="event.preventDefault();document.getElementById('contact').scrollIntoView({behavior:'smooth'})" id="nm-contact">Contact</a>
-    <a class="nav-link" href="https://mercurylabsstudio.com/terms-privacy" id="nm-terms">Terms &amp; Privacy</a>
-  </div>
-  <div class="lang-select-wrap">
-    <select id="langSelect">
-      <option value="en">🇺🇸 English</option>
-      <option value="ja">🇯🇵 日本語</option>
-      <option value="ko">🇰🇷 한국어</option>
-      <option value="vi">🇻🇳 Tiếng Việt</option>
-      <option value="th">🇹🇭 ภาษาไทย</option>
-    </select>
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:0.5">
-      <path d="M2 4l4 4 4-4" stroke="#7A9BC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-eyebrow"><span class="dot"></span><span id="eyebrow">Mercury Labs Studio · Est. 2025</span></div>
-  <h1><span class="line1" id="h1line1">We Build Apps</span><span class="line2" id="h1line2">People Love to Use</span></h1>
-  <p class="hero-sub" id="heroSub"><strong>Mercury Labs Studio</strong> is a mobile tech studio focused on user experience — from entertainment games to learning apps, we craft products that are <strong>refined, delightful, and meaningful</strong>.</p>
-  <div class="cta-group">
-    <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" id="ctaExplore">Explore Products</button>
-    <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" id="ctaContact">Contact Us</button>
-  </div>
-  <div class="scroll-hint"><div class="scroll-line"></div><span id="scrollHint">Scroll Down</span></div>
-</section>
-
-<!-- PRODUCTS SECTION LABEL -->
-<div class="section-divider fade-up"><span class="section-label" id="secLabel">Our Products</span></div>
-
-<!-- PRODUCTS -->
-<section class="products" id="products">
-  <div class="products-grid">
-    <!-- Mercury Vault -->
-    <div class="product-card vault fade-up">
-      <div class="glow-line"></div>
-      <div class="card-header">
-        <div class="app-icon icon-vault">MV</div>
-        <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus">Live Now</span></div>
-      </div>
-      <div class="card-body">
-        <div class="card-name">Mercury Vault</div>
-        <div class="card-tagline" id="vaultTagline">Mini game hub · Alchemy & Modern World</div>
-        <div class="card-desc" id="vaultDesc">A vibrant entertainment world blending mystical alchemy with modern urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.</div>
-        <div class="platform-row">
-          <a class="platform-chip chip-live" id="vaultAndroid" href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg> Android · Live</a>
-          <a class="platform-chip chip-live" id="vaultIOS" href="https://apps.apple.com/us/app/mercuryvault-pro/id6775095921" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> iOS · Live</a>
-        </div>
-      </div>
-    </div>
-    <!-- MercuryLearn -->
-    <div class="product-card learn fade-up" style="transition-delay:0.15s">
-      <div class="glow-line"></div>
-      <div class="card-header">
-        <div class="app-icon icon-learn">ML</div>
-        <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus">Live Now</span></div>
-      </div>
-      <div class="card-body">
-        <div class="card-name">MercuryLearn</div>
-        <div class="card-tagline" id="learnTagline">Micro-learning app · Learn smarter, go further</div>
-        <div class="card-desc" id="learnDesc">Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.</div>
-        <div class="platform-row">
-          <a class="platform-chip chip-live" id="learnAndroid" href="https://play.google.com/store/apps/details?id=com.mercurylearn.app" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg> Android · Live</a>
-          <span class="platform-chip chip-soon" id="learnIOS">iOS · Coming Soon</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<div class="section-divider fade-up"><span class="section-label" id="secAboutLabel">About Us</span></div>
-<section class="about fade-up" id="about">
-  <div class="about-title" id="aboutTitle">Built with <span style="color:var(--teal)">Passion</span></div>
-  <p class="about-text" id="aboutText">We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.</p>
-  <div class="pillars">
-    <div class="pillar fade-up"><div class="pillar-icon">🎮</div><div class="pillar-name" id="p1name">Mobile Gaming</div><div class="pillar-desc" id="p1desc">Light games, refined UI</div></div>
-    <div class="pillar fade-up" style="transition-delay:0.1s"><div class="pillar-icon">📚</div><div class="pillar-name" id="p2name">EdTech</div><div class="pillar-desc" id="p2desc">AI-powered smart learning</div></div>
-    <div class="pillar fade-up" style="transition-delay:0.2s"><div class="pillar-icon">⚡</div><div class="pillar-name" id="p3name">Performance</div><div class="pillar-desc" id="p3desc">Fast, smooth, reliable</div></div>
-    <div class="pillar fade-up" style="transition-delay:0.3s"><div class="pillar-icon">🌏</div><div class="pillar-name" id="p4name">Global Reach</div><div class="pillar-desc" id="p4desc">VI · EN · TH · JA · KO</div></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<div class="section-divider fade-up"><span class="section-label" id="secContactLabel">Get in Touch</span></div>
-<section class="contact fade-up" id="contact">
-  <div class="contact-card">
-    <div class="contact-title" id="contactTitle">Let's Connect</div>
-    <p class="contact-sub" id="contactSub">Have a question, partnership idea, or just want to say hello? Reach out — we'd love to hear from you.</p>
-    <a href="mailto:hi@mercurylabsstudio.com" class="email-link">
-      <span class="email-icon">✉️</span>
-      hi@mercurylabsstudio.com
+  <!-- NAV -->
+  <nav>
+    <a class="logo" href="#">
+      <div class="logo-mark">ML</div>
+      <span class="logo-name">Mercury<span>Labs</span> Studio</span>
     </a>
-    <p class="contact-tagline">Mercury Labs Studio — Building games, apps and tools people love.</p>
-  </div>
-</section>
+    <div class="nav-mid">
+      <a class="nav-link" href="#products"
+        onclick="event.preventDefault();document.getElementById('products').scrollIntoView({behavior:'smooth'})"
+        id="nm-products">Products</a>
+      <a class="nav-link" href="#contact"
+        onclick="event.preventDefault();document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+        id="nm-contact">Contact</a>
+      <a class="nav-link" href="https://mercurylabsstudio.com/terms-privacy" id="nm-terms">Terms &amp; Privacy</a>
+    </div>
+    <div class="lang-select-wrap">
+      <select id="langSelect">
+        <option value="en">🇺🇸 English</option>
+        <option value="ja">🇯🇵 日本語</option>
+        <option value="ko">🇰🇷 한국어</option>
+        <option value="vi">🇻🇳 Tiếng Việt</option>
+        <option value="th">🇹🇭 ภาษาไทย</option>
+      </select>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+        style="position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:0.5">
+        <path d="M2 4l4 4 4-4" stroke="#7A9BC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </nav>
 
-<!-- FOOTER -->
-<footer id="footerText">© 2025–2026 <span>Mercury Labs Studio</span> · Crafted with passion in Vietnam 🇻🇳</footer>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow"><span class="dot"></span><span id="eyebrow">Mercury Labs Studio · Est. 2025</span></div>
+    <h1><span class="line1" id="h1line1">We Build Apps</span><span class="line2" id="h1line2">People Love to Use</span>
+    </h1>
+    <p class="hero-sub" id="heroSub"><strong>Mercury Labs Studio</strong> is a mobile tech studio focused on user
+      experience — from entertainment games to learning apps, we craft products that are <strong>refined, delightful,
+        and meaningful</strong>.</p>
+    <div class="cta-group">
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"
+        id="ctaExplore">Explore Products</button>
+      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+        id="ctaContact">Contact Us</button>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div><span id="scrollHint">Scroll Down</span>
+    </div>
+  </section>
 
-<script>
-const ANDROID_ICO=`<svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg>`;
-const APPLE_ICO=`<svg class="ic-apple" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`;
-const T={
-  en:{
-    eyebrow:"Mercury Labs Studio · Est. 2025",
-    h1l1:"We Build Apps",h1l2:"People Love to Use",
-    heroSub:"<strong>Mercury Labs Studio</strong> is a mobile tech studio focused on user experience — from entertainment games to learning apps, we craft products that are <strong>refined, delightful, and meaningful</strong>.",
-    nmProducts:"Products",nmContact:"Contact",nmTerms:"Terms &amp; Privacy",
-    ctaExplore:"Explore Products",ctaContact:"Contact Us",scrollHint:"Scroll Down",
-    secLabel:"Our Products",secAboutLabel:"About Us",secContactLabel:"Get in Touch",
-    vaultStatus:"Live Now",vaultTagline:"Mini game hub · Alchemy & Modern World",
-    vaultDesc:"A vibrant entertainment world blending mystical alchemy with modern urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.",
-    vaultAndroid:`${ANDROID_ICO} Android · Live`,vaultIOS:`${APPLE_ICO} iOS · Live`,
-    learnStatus:"Live Now",learnTagline:"Micro-learning app · Learn smarter, go further",
-    learnDesc:"Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.",
-    learnAndroid:`${ANDROID_ICO} Android · Live`,learnIOS:`${APPLE_ICO} iOS · Coming Soon`,
-    aboutTitle:'Built with <span style="color:var(--teal)">Passion</span>',
-    aboutText:'We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.',
-    p1name:"Mobile Gaming",p1desc:"Light games, refined UI",
-    p2name:"EdTech",p2desc:"AI-powered smart learning",
-    p3name:"Performance",p3desc:"Fast, smooth, reliable",
-    p4name:"Global Reach",p4desc:"VI · EN · TH · JA · KO",
-    contactTitle:"Let's Connect",
-    contactSub:"Have a question, partnership idea, or just want to say hello? Reach out — we'd love to hear from you.",
-    footer:`© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · Crafted with passion in Vietnam 🇻🇳`
-  },
-  ja:{
-    eyebrow:"Mercury Labs Studio · 設立 2025",
-    h1l1:"私たちが作るのは",h1l2:"愛されるアプリ",
-    heroSub:"<strong>Mercury Labs Studio</strong> はユーザー体験に特化したモバイル技術スタジオです。エンタメゲームから学習アプリまで、<strong>洗練されていて、楽しく、意味のある</strong>プロダクトを届けます。",
-    nmProducts:"プロダクト",nmContact:"お問い合わせ",nmTerms:"利用規約・プライバシー",
-    ctaExplore:"プロダクトを見る",ctaContact:"お問い合わせ",scrollHint:"スクロール",
-    secLabel:"プロダクト一覧",secAboutLabel:"私たちについて",secContactLabel:"ご連絡",
-    vaultStatus:"配信中",vaultTagline:"ミニゲームハブ · 錬金術と現代の世界",
-    vaultDesc:"神秘的な錬金術と都市の現代生活が融合したエンタメワールド。カジュアルなミニゲームで、いつでもリラックスできます。",
-    vaultAndroid:`${ANDROID_ICO} Android · 配信中`,vaultIOS:`${APPLE_ICO} iOS · 配信中`,
-    learnStatus:"配信中",learnTagline:"マイクロ学習アプリ · スマートに学ぼう",
-    learnDesc:"AIによる個別最適化、科学的な間隔反復、厳選コンテンツで学習効率を最大化。速く学び、長く記憶し、毎日成長できます。",
-    learnAndroid:`${ANDROID_ICO} Android · 配信中`,learnIOS:`${APPLE_ICO} iOS · 近日公開`,
-    aboutTitle:'<span style="color:var(--teal)">情熱</span>で作られた',
-    aboutText:'私たちはベトナムを拠点とする小さなチームですが、高い集中力を持っています。すべてのプロダクトは「<strong>ユーザーが本当に必要なものは何か？</strong>」という問いから始まります。最高のテクノロジーは<strong>背景に溶け込み</strong>、純粋な体験と本質的な価値だけを残すと信じています。',
-    p1name:"モバイルゲーム",p1desc:"軽いゲーム、洗練されたUI",
-    p2name:"EdTech",p2desc:"AI活用のスマート学習",
-    p3name:"パフォーマンス",p3desc:"速い、滑らか、信頼性が高い",
-    p4name:"グローバル展開",p4desc:"VI · EN · TH · JA · KO",
-    contactTitle:"お気軽にご連絡を",
-    contactSub:"ご質問、パートナーシップのご提案、またはご挨拶など、何でもお気軽にどうぞ。",
-    footer:`© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · ベトナムで情熱を込めて制作 🇻🇳`
-  },
-  ko:{
-    eyebrow:"Mercury Labs Studio · 설립 2025",
-    h1l1:"우리가 만드는 건",h1l2:"사람들이 사랑하는 앱",
-    heroSub:"<strong>Mercury Labs Studio</strong>는 사용자 경험에 집중하는 모바일 기술 스튜디오입니다. 엔터테인먼트 게임부터 학습 앱까지, <strong>세련되고 즐겁고 의미 있는</strong> 제품을 만듭니다.",
-    nmProducts:"제품",nmContact:"문의",nmTerms:"약관 및 개인정보",
-    ctaExplore:"제품 살펴보기",ctaContact:"문의하기",scrollHint:"스크롤",
-    secLabel:"우리의 제품",secAboutLabel:"팀 소개",secContactLabel:"연락하기",
-    vaultStatus:"출시됨",vaultTagline:"미니 게임 허브 · 연금술과 현대 세계",
-    vaultDesc:"신비로운 연금술과 현대 도시 생활이 어우러진 엔터테인먼트 세계. 캐주얼 미니 게임으로 언제든지 편안한 시간을 즐기세요.",
-    vaultAndroid:`${ANDROID_ICO} Android · 출시됨`,vaultIOS:`${APPLE_ICO} iOS · 출시됨`,
-    learnStatus:"출시됨",learnTagline:"마이크로 러닝 앱 · 스마트하게 배우기",
-    learnDesc:"AI 개인화 학습 경로, 과학적 반복 학습, 엄선된 콘텐츠로 더 빠르게 배우고, 오래 기억하고, 매일 성장하세요.",
-    learnAndroid:`${ANDROID_ICO} Android · 출시됨`,learnIOS:`${APPLE_ICO} iOS · 출시 예정`,
-    aboutTitle:'<span style="color:var(--teal)">열정</span>으로 만든',
-    aboutText:'저희는 베트남에 기반을 둔 작지만 집중력 높은 팀입니다. 모든 제품은 하나의 질문에서 시작합니다: <strong>사용자가 진정으로 필요한 것은 무엇인가?</strong> 최고의 기술은 <strong>자연스럽게 스며들어</strong> — 순수한 경험과 진정한 가치만 남긴다고 믿습니다.',
-    p1name:"모바일 게임",p1desc:"가벼운 게임, 세련된 UI",
-    p2name:"에듀테크",p2desc:"AI 스마트 학습",
-    p3name:"성능",p3desc:"빠르고, 부드럽고, 안정적",
-    p4name:"글로벌",p4desc:"VI · EN · TH · JA · KO",
-    contactTitle:"함께 이야기해요",
-    contactSub:"질문, 제휴 제안, 또는 그냥 인사라도 좋습니다. 언제든지 연락해 주세요.",
-    footer:`© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · 베트남에서 열정을 담아 만든 🇻🇳`
-  },
-  vi:{
-    eyebrow:"Mercury Labs Studio · Thành lập 2025",
-    h1l1:"Chúng tôi tạo ra",h1l2:"Ứng dụng được yêu thích",
-    heroSub:"<strong>Mercury Labs Studio</strong> là studio công nghệ mobile tập trung vào trải nghiệm người dùng — từ game giải trí đến ứng dụng học tập, chúng tôi tạo ra sản phẩm <strong>tinh tế, thú vị và chạm đến trái tim</strong>.",
-    nmProducts:"Sản phẩm",nmContact:"Liên hệ",nmTerms:"Điều khoản &amp; Bảo mật",
-    ctaExplore:"Khám phá sản phẩm",ctaContact:"Liên hệ",scrollHint:"Cuộn xuống",
-    secLabel:"Sản phẩm của chúng tôi",secAboutLabel:"Về chúng tôi",secContactLabel:"Liên hệ",
-    vaultStatus:"Đang hoạt động",vaultTagline:"Hub mini game · Nhà giả kim & Thế giới hiện đại",
-    vaultDesc:"Thế giới giải trí kết hợp giữa thuật giả kim huyền bí và nhịp sống đô thị hiện đại. Mini game đa dạng, gameplay nhẹ nhàng — hoàn hảo cho mọi khoảnh khắc thư giãn.",
-    vaultAndroid:`${ANDROID_ICO} Android · Live`,vaultIOS:`${APPLE_ICO} iOS · Live`,
-    learnStatus:"Đang hoạt động",learnTagline:"Micro-learning app · Học thông minh, tiến xa hơn",
-    learnDesc:"Ứng dụng học tập thế hệ mới với AI cá nhân hóa lộ trình, hệ thống spaced repetition khoa học và nội dung được chắt lọc — học nhanh, nhớ lâu, tiến bộ mỗi ngày.",
-    learnAndroid:`${ANDROID_ICO} Android · Live`,learnIOS:`${APPLE_ICO} iOS · Sắp ra mắt`,
-    aboutTitle:'Được tạo ra với <span style="color:var(--teal)">nhiệt huyết</span>',
-    aboutText:'Chúng tôi là đội ngũ nhỏ nhưng tập trung cao độ, đặt trụ sở tại Việt Nam. Mỗi sản phẩm bắt đầu từ câu hỏi: <strong>Người dùng thực sự cần gì?</strong> Chúng tôi tin rằng công nghệ tốt nhất là công nghệ <strong>ẩn mình phía sau</strong> — để lại chỉ trải nghiệm thuần túy và giá trị thực.',
-    p1name:"Mobile Gaming",p1desc:"Game nhẹ, UI tinh tế",
-    p2name:"EdTech",p2desc:"Học tập thông minh với AI",
-    p3name:"Hiệu năng",p3desc:"Nhanh, mượt, đáng tin cậy",
-    p4name:"Toàn cầu",p4desc:"VI · EN · TH · JA · KO",
-    contactTitle:"Liên hệ với chúng tôi",
-    contactSub:"Có câu hỏi, ý tưởng hợp tác, hay đơn giản chỉ muốn chào hỏi? Hãy liên lạc — chúng tôi rất vui được nghe từ bạn.",
-    footer:`© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · Tâm huyết tạo ra tại Việt Nam 🇻🇳`
-  },
-  th:{
-    eyebrow:"Mercury Labs Studio · ก่อตั้ง 2025",
-    h1l1:"เราสร้างแอปที่",h1l2:"ผู้คนหลงรัก",
-    heroSub:"<strong>Mercury Labs Studio</strong> คือสตูดิโอเทคโนโลยีมือถือที่มุ่งเน้นประสบการณ์ผู้ใช้ — จากเกมบันเทิงถึงแอปการเรียนรู้ เราสร้างผลิตภัณฑ์ที่ <strong>ประณีต สนุกสนาน และมีคุณค่า</strong>",
-    nmProducts:"ผลิตภัณฑ์",nmContact:"ติดต่อ",nmTerms:"ข้อกำหนด &amp; ความเป็นส่วนตัว",
-    ctaExplore:"สำรวจผลิตภัณฑ์",ctaContact:"ติดต่อเรา",scrollHint:"เลื่อนลง",
-    secLabel:"ผลิตภัณฑ์ของเรา",secAboutLabel:"เกี่ยวกับเรา",secContactLabel:"ติดต่อ",
-    vaultStatus:"เปิดให้บริการ",vaultTagline:"มินิเกมฮับ · การเล่นแร่แปรธาตุ & โลกสมัยใหม่",
-    vaultDesc:"โลกบันเทิงที่ผสมผสานระหว่างการเล่นแร่แปรธาตุลึกลับกับชีวิตเมืองสมัยใหม่ มินิเกมหลากหลาย เล่นง่าย — เหมาะกับทุกช่วงเวลาพักผ่อน",
-    vaultAndroid:`${ANDROID_ICO} Android · เปิดแล้ว`,vaultIOS:`${APPLE_ICO} iOS · เปิดแล้ว`,
-    learnStatus:"เปิดให้บริการ",learnTagline:"แอปเรียนรู้แบบไมโคร · เรียนฉลาด ก้าวไกล",
-    learnDesc:"แอปการเรียนรู้ยุคใหม่ด้วย AI ปรับแต่งเส้นทางส่วนตัว ระบบทบทวนซ้ำตามหลักวิทยาศาสตร์ และเนื้อหาคัดสรร — เรียนเร็ว จำได้นาน พัฒนาทุกวัน",
-    learnAndroid:`${ANDROID_ICO} Android · เปิดแล้ว`,learnIOS:`${APPLE_ICO} iOS · เร็วๆ นี้`,
-    aboutTitle:'สร้างด้วย<span style="color:var(--teal)">ความหลงใหล</span>',
-    aboutText:'เราเป็นทีมเล็กแต่มีสมาธิสูง ตั้งอยู่ในเวียดนาม ทุกผลิตภัณฑ์เริ่มต้นจากคำถามง่ายๆ: <strong>ผู้ใช้ต้องการอะไรจริงๆ?</strong> เราเชื่อว่าเทคโนโลยีที่ดีที่สุดคือเทคโนโลยีที่ <strong>เป็นส่วนหนึ่งของประสบการณ์</strong> — เหลือไว้เพียงประสบการณ์บริสุทธิ์และคุณค่าที่แท้จริง',
-    p1name:"โมบายล์เกม",p1desc:"เกมเบา UI ประณีต",
-    p2name:"เอดเทค",p2desc:"การเรียนรู้ AI อัจฉริยะ",
-    p3name:"ประสิทธิภาพ",p3desc:"เร็ว นุ่มนวล เชื่อถือได้",
-    p4name:"ทั่วโลก",p4desc:"VI · EN · TH · JA · KO",
-    contactTitle:"ติดต่อเรา",
-    contactSub:"มีคำถาม ข้อเสนอความร่วมมือ หรือแค่อยากทักทาย? ติดต่อมาได้เลย — เรายินดีเสมอ",
-    footer:`© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · สร้างด้วยความตั้งใจจากเวียดนาม 🇻🇳`
-  }
-};
+  <!-- PRODUCTS SECTION LABEL -->
+  <div class="section-divider fade-up"><span class="section-label" id="secLabel">Our Products</span></div>
 
-const IDS=['eyebrow','h1line1','h1line2','heroSub','ctaExplore','ctaContact','scrollHint','secLabel','secAboutLabel','secContactLabel','vaultStatus','vaultTagline','vaultDesc','vaultAndroid','vaultIOS','learnStatus','learnTagline','learnDesc','learnAndroid','learnIOS','aboutTitle','aboutText','p1name','p1desc','p2name','p2desc','p3name','p3desc','p4name','p4desc','contactTitle','contactSub','footerText'];
-const KEYS=['eyebrow','h1l1','h1l2','heroSub','ctaExplore','ctaContact','scrollHint','secLabel','secAboutLabel','secContactLabel','vaultStatus','vaultTagline','vaultDesc','vaultAndroid','vaultIOS','learnStatus','learnTagline','learnDesc','learnAndroid','learnIOS','aboutTitle','aboutText','p1name','p1desc','p2name','p2desc','p3name','p3desc','p4name','p4desc','contactTitle','contactSub','footer'];
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="products-grid">
+      <!-- Mercury Vault -->
+      <div class="product-card vault fade-up">
+        <div class="glow-line"></div>
+        <div class="card-header">
+          <div class="app-icon icon-vault">MV</div>
+          <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus">Live Now</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Mercury Vault</div>
+          <div class="card-tagline" id="vaultTagline">Mini game hub · Alchemy & Modern World</div>
+          <div class="card-desc" id="vaultDesc">A vibrant entertainment world blending mystical alchemy with modern
+            urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.</div>
+          <div class="platform-row">
+            <a class="platform-chip chip-live" id="vaultAndroid"
+              href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z" />
+              </svg> Android · Live</a>
+            <a class="platform-chip chip-live" id="vaultIOS"
+              href="https://apps.apple.com/us/app/mercuryvault-pro/id6775095921" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg> iOS · Live</a>
+          </div>
+        </div>
+      </div>
+      <!-- MercuryLearn -->
+      <div class="product-card learn fade-up" style="transition-delay:0.15s">
+        <div class="glow-line"></div>
+        <div class="card-header">
+          <div class="app-icon icon-learn">ML</div>
+          <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus">Live Now</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">MercuryLearn</div>
+          <div class="card-tagline" id="learnTagline">Micro-learning app · Learn smarter, go further</div>
+          <div class="card-desc" id="learnDesc">Next-gen learning app with AI-personalized paths, scientific spaced
+            repetition, and curated content — learn faster, remember longer, progress every day.</div>
+          <div class="platform-row">
+            <a class="platform-chip chip-live" id="learnAndroid"
+              href="https://play.google.com/store/apps/details?id=com.mercurylearn.app" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z" />
+              </svg> Android · Live</a>
+            <span class="platform-chip chip-soon" id="learnIOS">iOS · Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-function applyLang(lang){
-  loadLanguageFonts(lang);
-  const d=T[lang];
-  IDS.forEach((id,i)=>{
-    const el=document.getElementById(id);
-    if(el) el.innerHTML=d[KEYS[i]]||'';
-  });
-  // nav menu labels
-  const nm=document.getElementById('nm-products');if(nm)nm.innerHTML=d.nmProducts||'';
-  const nc=document.getElementById('nm-contact');if(nc)nc.innerHTML=d.nmContact||'';
-  const nt=document.getElementById('nm-terms');if(nt)nt.innerHTML=d.nmTerms||'';
-  const fontMap={ja:"'Noto Sans JP',sans-serif",ko:"'Noto Sans KR',sans-serif",th:"'Noto Sans Thai',sans-serif"};
-  document.body.style.fontFamily=fontMap[lang]||"'DM Sans',sans-serif";
-  document.documentElement.lang=lang;
-}
+  <!-- ABOUT -->
+  <div class="section-divider fade-up"><span class="section-label" id="secAboutLabel">About Us</span></div>
+  <section class="about fade-up" id="about">
+    <div class="about-title" id="aboutTitle">Built with <span style="color:var(--teal)">Passion</span></div>
+    <p class="about-text" id="aboutText">We are a small but highly focused team based in Vietnam. Every product we build
+      starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology
+      <strong>disappears into the background</strong> — leaving only pure experience and real value.</p>
+    <div class="pillars">
+      <div class="pillar fade-up">
+        <div class="pillar-icon">🎮</div>
+        <div class="pillar-name" id="p1name">Mobile Gaming</div>
+        <div class="pillar-desc" id="p1desc">Light games, refined UI</div>
+      </div>
+      <div class="pillar fade-up" style="transition-delay:0.1s">
+        <div class="pillar-icon">📚</div>
+        <div class="pillar-name" id="p2name">EdTech</div>
+        <div class="pillar-desc" id="p2desc">AI-powered smart learning</div>
+      </div>
+      <div class="pillar fade-up" style="transition-delay:0.2s">
+        <div class="pillar-icon">⚡</div>
+        <div class="pillar-name" id="p3name">Performance</div>
+        <div class="pillar-desc" id="p3desc">Fast, smooth, reliable</div>
+      </div>
+      <div class="pillar fade-up" style="transition-delay:0.3s">
+        <div class="pillar-icon">🌏</div>
+        <div class="pillar-name" id="p4name">Global Reach</div>
+        <div class="pillar-desc" id="p4desc">VI · EN · TH · JA · KO</div>
+      </div>
+    </div>
+  </section>
 
-document.getElementById('langSelect').addEventListener('change',function(){
-  applyLang(this.value);
-  localStorage.setItem('ml_lang',this.value);
-});
+  <!-- CONTACT -->
+  <div class="section-divider fade-up"><span class="section-label" id="secContactLabel">Get in Touch</span></div>
+  <section class="contact fade-up" id="contact">
+    <div class="contact-card">
+      <div class="contact-title" id="contactTitle">Let's Connect</div>
+      <p class="contact-sub" id="contactSub">Have a question, partnership idea, or just want to say hello? Reach out —
+        we'd love to hear from you.</p>
+      <a href="mailto:hi@mercurylabsstudio.com" class="email-link">
+        <span class="email-icon">✉️</span>
+        hi@mercurylabsstudio.com
+      </a>
+      <p class="contact-tagline">Mercury Labs Studio — Building games, apps and tools people love.</p>
+    </div>
+  </section>
 
-const savedLang=localStorage.getItem('ml_lang')||'en';
-document.getElementById('langSelect').value=savedLang;
-applyLang(savedLang);
+  <!-- FOOTER -->
+  <footer id="footerText">© 2025–2026 <span>Mercury Labs Studio</span> · Crafted with passion in Vietnam 🇻🇳</footer>
 
-// Stars
-const starsEl=document.getElementById('stars');
-for(let i=0;i<90;i++){
-  const s=document.createElement('div');s.className='star';
-  const sz=Math.random()*2.5+0.5;
-  s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${2+Math.random()*4}s;--o:${0.3+Math.random()*0.7};animation-delay:${Math.random()*4}s`;
-  starsEl.appendChild(s);
-}
+  <script>
+    const ANDROID_ICO = `<svg class="ic-android" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z"/></svg>`;
+    const APPLE_ICO = `<svg class="ic-apple" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>`;
+    const T = {
+      en: {
+        eyebrow: "Mercury Labs Studio · Est. 2025",
+        h1l1: "We Build Apps", h1l2: "People Love to Use",
+        heroSub: "<strong>Mercury Labs Studio</strong> is a mobile tech studio focused on user experience — from entertainment games to learning apps, we craft products that are <strong>refined, delightful, and meaningful</strong>.",
+        nmProducts: "Products", nmContact: "Contact", nmTerms: "Terms &amp; Privacy",
+        ctaExplore: "Explore Products", ctaContact: "Contact Us", scrollHint: "Scroll Down",
+        secLabel: "Our Products", secAboutLabel: "About Us", secContactLabel: "Get in Touch",
+        vaultStatus: "Live Now", vaultTagline: "Mini game hub · Alchemy & Modern World",
+        vaultDesc: "A vibrant entertainment world blending mystical alchemy with modern urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.",
+        vaultAndroid: `${ANDROID_ICO} Android · Live`, vaultIOS: `${APPLE_ICO} iOS · Live`,
+        learnStatus: "Live Now", learnTagline: "Micro-learning app · Learn smarter, go further",
+        learnDesc: "Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.",
+        learnAndroid: `${ANDROID_ICO} Android · Live`, learnIOS: `${APPLE_ICO} iOS · Coming Soon`,
+        aboutTitle: 'Built with <span style="color:var(--teal)">Passion</span>',
+        aboutText: 'We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.',
+        p1name: "Mobile Gaming", p1desc: "Light games, refined UI",
+        p2name: "EdTech", p2desc: "AI-powered smart learning",
+        p3name: "Performance", p3desc: "Fast, smooth, reliable",
+        p4name: "Global Reach", p4desc: "VI · EN · TH · JA · KO",
+        contactTitle: "Let's Connect",
+        contactSub: "Have a question, partnership idea, or just want to say hello? Reach out — we'd love to hear from you.",
+        footer: `© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · Crafted with passion in Vietnam 🇻🇳`
+      },
+      ja: {
+        eyebrow: "Mercury Labs Studio · 設立 2025",
+        h1l1: "私たちが作るのは", h1l2: "愛されるアプリ",
+        heroSub: "<strong>Mercury Labs Studio</strong> はユーザー体験に特化したモバイル技術スタジオです。エンタメゲームから学習アプリまで、<strong>洗練されていて、楽しく、意味のある</strong>プロダクトを届けます。",
+        nmProducts: "プロダクト", nmContact: "お問い合わせ", nmTerms: "利用規約・プライバシー",
+        ctaExplore: "プロダクトを見る", ctaContact: "お問い合わせ", scrollHint: "スクロール",
+        secLabel: "プロダクト一覧", secAboutLabel: "私たちについて", secContactLabel: "ご連絡",
+        vaultStatus: "配信中", vaultTagline: "ミニゲームハブ · 錬金術と現代の世界",
+        vaultDesc: "神秘的な錬金術と都市の現代生活が融合したエンタメワールド。カジュアルなミニゲームで、いつでもリラックスできます。",
+        vaultAndroid: `${ANDROID_ICO} Android · 配信中`, vaultIOS: `${APPLE_ICO} iOS · 配信中`,
+        learnStatus: "配信中", learnTagline: "マイクロ学習アプリ · スマートに学ぼう",
+        learnDesc: "AIによる個別最適化、科学的な間隔反復、厳選コンテンツで学習効率を最大化。速く学び、長く記憶し、毎日成長できます。",
+        learnAndroid: `${ANDROID_ICO} Android · 配信中`, learnIOS: `${APPLE_ICO} iOS · 近日公開`,
+        aboutTitle: '<span style="color:var(--teal)">情熱</span>で作られた',
+        aboutText: '私たちはベトナムを拠点とする小さなチームですが、高い集中力を持っています。すべてのプロダクトは「<strong>ユーザーが本当に必要なものは何か？</strong>」という問いから始まります。最高のテクノロジーは<strong>背景に溶け込み</strong>、純粋な体験と本質的な価値だけを残すと信じています。',
+        p1name: "モバイルゲーム", p1desc: "軽いゲーム、洗練されたUI",
+        p2name: "EdTech", p2desc: "AI活用のスマート学習",
+        p3name: "パフォーマンス", p3desc: "速い、滑らか、信頼性が高い",
+        p4name: "グローバル展開", p4desc: "VI · EN · TH · JA · KO",
+        contactTitle: "お気軽にご連絡を",
+        contactSub: "ご質問、パートナーシップのご提案、またはご挨拶など、何でもお気軽にどうぞ。",
+        footer: `© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · ベトナムで情熱を込めて制作 🇻🇳`
+      },
+      ko: {
+        eyebrow: "Mercury Labs Studio · 설립 2025",
+        h1l1: "우리가 만드는 건", h1l2: "사람들이 사랑하는 앱",
+        heroSub: "<strong>Mercury Labs Studio</strong>는 사용자 경험에 집중하는 모바일 기술 스튜디오입니다. 엔터테인먼트 게임부터 학습 앱까지, <strong>세련되고 즐겁고 의미 있는</strong> 제품을 만듭니다.",
+        nmProducts: "제품", nmContact: "문의", nmTerms: "약관 및 개인정보",
+        ctaExplore: "제품 살펴보기", ctaContact: "문의하기", scrollHint: "스크롤",
+        secLabel: "우리의 제품", secAboutLabel: "팀 소개", secContactLabel: "연락하기",
+        vaultStatus: "출시됨", vaultTagline: "미니 게임 허브 · 연금술과 현대 세계",
+        vaultDesc: "신비로운 연금술과 현대 도시 생활이 어우러진 엔터테인먼트 세계. 캐주얼 미니 게임으로 언제든지 편안한 시간을 즐기세요.",
+        vaultAndroid: `${ANDROID_ICO} Android · 출시됨`, vaultIOS: `${APPLE_ICO} iOS · 출시됨`,
+        learnStatus: "출시됨", learnTagline: "마이크로 러닝 앱 · 스마트하게 배우기",
+        learnDesc: "AI 개인화 학습 경로, 과학적 반복 학습, 엄선된 콘텐츠로 더 빠르게 배우고, 오래 기억하고, 매일 성장하세요.",
+        learnAndroid: `${ANDROID_ICO} Android · 출시됨`, learnIOS: `${APPLE_ICO} iOS · 출시 예정`,
+        aboutTitle: '<span style="color:var(--teal)">열정</span>으로 만든',
+        aboutText: '저희는 베트남에 기반을 둔 작지만 집중력 높은 팀입니다. 모든 제품은 하나의 질문에서 시작합니다: <strong>사용자가 진정으로 필요한 것은 무엇인가?</strong> 최고의 기술은 <strong>자연스럽게 스며들어</strong> — 순수한 경험과 진정한 가치만 남긴다고 믿습니다.',
+        p1name: "모바일 게임", p1desc: "가벼운 게임, 세련된 UI",
+        p2name: "에듀테크", p2desc: "AI 스마트 학습",
+        p3name: "성능", p3desc: "빠르고, 부드럽고, 안정적",
+        p4name: "글로벌", p4desc: "VI · EN · TH · JA · KO",
+        contactTitle: "함께 이야기해요",
+        contactSub: "질문, 제휴 제안, 또는 그냥 인사라도 좋습니다. 언제든지 연락해 주세요.",
+        footer: `© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · 베트남에서 열정을 담아 만든 🇻🇳`
+      },
+      vi: {
+        eyebrow: "Mercury Labs Studio · Thành lập 2025",
+        h1l1: "Chúng tôi tạo ra", h1l2: "Ứng dụng được yêu thích",
+        heroSub: "<strong>Mercury Labs Studio</strong> là studio công nghệ mobile tập trung vào trải nghiệm người dùng — từ game giải trí đến ứng dụng học tập, chúng tôi tạo ra sản phẩm <strong>tinh tế, thú vị và chạm đến trái tim</strong>.",
+        nmProducts: "Sản phẩm", nmContact: "Liên hệ", nmTerms: "Điều khoản &amp; Bảo mật",
+        ctaExplore: "Khám phá sản phẩm", ctaContact: "Liên hệ", scrollHint: "Cuộn xuống",
+        secLabel: "Sản phẩm của chúng tôi", secAboutLabel: "Về chúng tôi", secContactLabel: "Liên hệ",
+        vaultStatus: "Đang hoạt động", vaultTagline: "Hub mini game · Nhà giả kim & Thế giới hiện đại",
+        vaultDesc: "Thế giới giải trí kết hợp giữa thuật giả kim huyền bí và nhịp sống đô thị hiện đại. Mini game đa dạng, gameplay nhẹ nhàng — hoàn hảo cho mọi khoảnh khắc thư giãn.",
+        vaultAndroid: `${ANDROID_ICO} Android · Live`, vaultIOS: `${APPLE_ICO} iOS · Live`,
+        learnStatus: "Đang hoạt động", learnTagline: "Micro-learning app · Học thông minh, tiến xa hơn",
+        learnDesc: "Ứng dụng học tập thế hệ mới với AI cá nhân hóa lộ trình, hệ thống spaced repetition khoa học và nội dung được chắt lọc — học nhanh, nhớ lâu, tiến bộ mỗi ngày.",
+        learnAndroid: `${ANDROID_ICO} Android · Live`, learnIOS: `${APPLE_ICO} iOS · Sắp ra mắt`,
+        aboutTitle: 'Được tạo ra với <span style="color:var(--teal)">nhiệt huyết</span>',
+        aboutText: 'Chúng tôi là đội ngũ nhỏ nhưng tập trung cao độ, đặt trụ sở tại Việt Nam. Mỗi sản phẩm bắt đầu từ câu hỏi: <strong>Người dùng thực sự cần gì?</strong> Chúng tôi tin rằng công nghệ tốt nhất là công nghệ <strong>ẩn mình phía sau</strong> — để lại chỉ trải nghiệm thuần túy và giá trị thực.',
+        p1name: "Mobile Gaming", p1desc: "Game nhẹ, UI tinh tế",
+        p2name: "EdTech", p2desc: "Học tập thông minh với AI",
+        p3name: "Hiệu năng", p3desc: "Nhanh, mượt, đáng tin cậy",
+        p4name: "Toàn cầu", p4desc: "VI · EN · TH · JA · KO",
+        contactTitle: "Liên hệ với chúng tôi",
+        contactSub: "Có câu hỏi, ý tưởng hợp tác, hay đơn giản chỉ muốn chào hỏi? Hãy liên lạc — chúng tôi rất vui được nghe từ bạn.",
+        footer: `© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · Tâm huyết tạo ra tại Việt Nam 🇻🇳`
+      },
+      th: {
+        eyebrow: "Mercury Labs Studio · ก่อตั้ง 2025",
+        h1l1: "เราสร้างแอปที่", h1l2: "ผู้คนหลงรัก",
+        heroSub: "<strong>Mercury Labs Studio</strong> คือสตูดิโอเทคโนโลยีมือถือที่มุ่งเน้นประสบการณ์ผู้ใช้ — จากเกมบันเทิงถึงแอปการเรียนรู้ เราสร้างผลิตภัณฑ์ที่ <strong>ประณีต สนุกสนาน และมีคุณค่า</strong>",
+        nmProducts: "ผลิตภัณฑ์", nmContact: "ติดต่อ", nmTerms: "ข้อกำหนด &amp; ความเป็นส่วนตัว",
+        ctaExplore: "สำรวจผลิตภัณฑ์", ctaContact: "ติดต่อเรา", scrollHint: "เลื่อนลง",
+        secLabel: "ผลิตภัณฑ์ของเรา", secAboutLabel: "เกี่ยวกับเรา", secContactLabel: "ติดต่อ",
+        vaultStatus: "เปิดให้บริการ", vaultTagline: "มินิเกมฮับ · การเล่นแร่แปรธาตุ & โลกสมัยใหม่",
+        vaultDesc: "โลกบันเทิงที่ผสมผสานระหว่างการเล่นแร่แปรธาตุลึกลับกับชีวิตเมืองสมัยใหม่ มินิเกมหลากหลาย เล่นง่าย — เหมาะกับทุกช่วงเวลาพักผ่อน",
+        vaultAndroid: `${ANDROID_ICO} Android · เปิดแล้ว`, vaultIOS: `${APPLE_ICO} iOS · เปิดแล้ว`,
+        learnStatus: "เปิดให้บริการ", learnTagline: "แอปเรียนรู้แบบไมโคร · เรียนฉลาด ก้าวไกล",
+        learnDesc: "แอปการเรียนรู้ยุคใหม่ด้วย AI ปรับแต่งเส้นทางส่วนตัว ระบบทบทวนซ้ำตามหลักวิทยาศาสตร์ และเนื้อหาคัดสรร — เรียนเร็ว จำได้นาน พัฒนาทุกวัน",
+        learnAndroid: `${ANDROID_ICO} Android · เปิดแล้ว`, learnIOS: `${APPLE_ICO} iOS · เร็วๆ นี้`,
+        aboutTitle: 'สร้างด้วย<span style="color:var(--teal)">ความหลงใหล</span>',
+        aboutText: 'เราเป็นทีมเล็กแต่มีสมาธิสูง ตั้งอยู่ในเวียดนาม ทุกผลิตภัณฑ์เริ่มต้นจากคำถามง่ายๆ: <strong>ผู้ใช้ต้องการอะไรจริงๆ?</strong> เราเชื่อว่าเทคโนโลยีที่ดีที่สุดคือเทคโนโลยีที่ <strong>เป็นส่วนหนึ่งของประสบการณ์</strong> — เหลือไว้เพียงประสบการณ์บริสุทธิ์และคุณค่าที่แท้จริง',
+        p1name: "โมบายล์เกม", p1desc: "เกมเบา UI ประณีต",
+        p2name: "เอดเทค", p2desc: "การเรียนรู้ AI อัจฉริยะ",
+        p3name: "ประสิทธิภาพ", p3desc: "เร็ว นุ่มนวล เชื่อถือได้",
+        p4name: "ทั่วโลก", p4desc: "VI · EN · TH · JA · KO",
+        contactTitle: "ติดต่อเรา",
+        contactSub: "มีคำถาม ข้อเสนอความร่วมมือ หรือแค่อยากทักทาย? ติดต่อมาได้เลย — เรายินดีเสมอ",
+        footer: `© 2025–${new Date().getFullYear()} <span>Mercury Labs Studio</span> · สร้างด้วยความตั้งใจจากเวียดนาม 🇻🇳`
+      }
+    };
 
-// Intersection observer - lazy load fade-up animations
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.12});
-document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+    const IDS = ['eyebrow', 'h1line1', 'h1line2', 'heroSub', 'ctaExplore', 'ctaContact', 'scrollHint', 'secLabel', 'secAboutLabel', 'secContactLabel', 'vaultStatus', 'vaultTagline', 'vaultDesc', 'vaultAndroid', 'vaultIOS', 'learnStatus', 'learnTagline', 'learnDesc', 'learnAndroid', 'learnIOS', 'aboutTitle', 'aboutText', 'p1name', 'p1desc', 'p2name', 'p2desc', 'p3name', 'p3desc', 'p4name', 'p4desc', 'contactTitle', 'contactSub', 'footerText'];
+    const KEYS = ['eyebrow', 'h1l1', 'h1l2', 'heroSub', 'ctaExplore', 'ctaContact', 'scrollHint', 'secLabel', 'secAboutLabel', 'secContactLabel', 'vaultStatus', 'vaultTagline', 'vaultDesc', 'vaultAndroid', 'vaultIOS', 'learnStatus', 'learnTagline', 'learnDesc', 'learnAndroid', 'learnIOS', 'aboutTitle', 'aboutText', 'p1name', 'p1desc', 'p2name', 'p2desc', 'p3name', 'p3desc', 'p4name', 'p4desc', 'contactTitle', 'contactSub', 'footer'];
 
-// Lazy load non-English language fonts when language changes
-function loadLanguageFonts(lang){
-  if((lang==='ja'||lang==='ko'||lang==='th')&&!window.langFontsLoaded){
-    const link=document.createElement('link');
-    link.rel='stylesheet';
-    link.href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Thai:wght@300;400;700&display=swap';
-    document.head.appendChild(link);
-    window.langFontsLoaded=true;
-  }
-}
-</script>
+    function applyLang(lang) {
+      loadLanguageFonts(lang);
+      const d = T[lang];
+      IDS.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = d[KEYS[i]] || '';
+      });
+      // nav menu labels
+      const nm = document.getElementById('nm-products'); if (nm) nm.innerHTML = d.nmProducts || '';
+      const nc = document.getElementById('nm-contact'); if (nc) nc.innerHTML = d.nmContact || '';
+      const nt = document.getElementById('nm-terms'); if (nt) nt.innerHTML = d.nmTerms || '';
+      const fontMap = { ja: "'Noto Sans JP',sans-serif", ko: "'Noto Sans KR',sans-serif", th: "'Noto Sans Thai',sans-serif" };
+      document.body.style.fontFamily = fontMap[lang] || "'DM Sans',sans-serif";
+      document.documentElement.lang = lang;
+    }
+
+    document.getElementById('langSelect').addEventListener('change', function () {
+      applyLang(this.value);
+      localStorage.setItem('ml_lang', this.value);
+    });
+
+    const savedLang = localStorage.getItem('ml_lang') || 'en';
+    document.getElementById('langSelect').value = savedLang;
+    applyLang(savedLang);
+
+    // Stars
+    const starsEl = document.getElementById('stars');
+    for (let i = 0; i < 90; i++) {
+      const s = document.createElement('div'); s.className = 'star';
+      const sz = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random() * 100}%;left:${Math.random() * 100}%;--d:${2 + Math.random() * 4}s;--o:${0.3 + Math.random() * 0.7};animation-delay:${Math.random() * 4}s`;
+      starsEl.appendChild(s);
+    }
+
+    // Intersection observer - lazy load fade-up animations
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }) }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    // Lazy load non-English language fonts when language changes
+    function loadLanguageFonts(lang) {
+      if ((lang === 'ja' || lang === 'ko' || lang === 'th') && !window.langFontsLoaded) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans+Thai:wght@300;400;700&display=swap';
+        document.head.appendChild(link);
+        window.langFontsLoaded = true;
+      }
+    }
+  </script>
 </body>
+
 </html>
