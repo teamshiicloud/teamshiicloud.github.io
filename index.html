@@ -13,10 +13,22 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mercurylabsstudio.com">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="prefetch" href="/terms-privacy">
+  <link rel="prefetch" href="/terms-privacy.html">
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VFPMPZKQP"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date()); gtag('config', 'G-6VFPMPZKQP');</script>
+  <script>
+    window.addEventListener('load', function() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-6VFPMPZKQP";
+      document.head.appendChild(script);
+      script.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) }
+        gtag('js', new Date());
+        gtag('config', 'G-6VFPMPZKQP');
+      }
+    });
+  </script>
 
   <!-- Open Graph (Facebook, Zalo, LinkedIn) -->
   <meta property="og:type" content="website">
@@ -40,7 +52,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all'">
   <style>
     * {
       margin: 0;
@@ -107,7 +119,10 @@
       border-radius: 50%;
       filter: blur(80px);
       pointer-events: none;
-      z-index: 0
+      z-index: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      will-change: transform, filter
     }
 
     .orb1 {
