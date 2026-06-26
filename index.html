@@ -665,6 +665,11 @@
       border: 0.5px solid rgba(255, 255, 255, 0.08);
       border-radius: 10px;
       width: fit-content;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .qr-install:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
     }
     .qr-install img {
       width: 36px;
@@ -1219,10 +1224,10 @@
           <img class="app-icon icon-vault" src="vault-logo.webp" alt="Mercury Vault Logo" loading="lazy">
           <div class="header-actions">
             <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus">Live Now</span></div>
-            <div class="qr-install hidden-mobile">
+            <a class="qr-install hidden-mobile" href="/mercuryvault-download.html" target="_blank" style="text-decoration:none;cursor:pointer">
               <img src="MercuryVault_Download_QR.png" alt="Scan to install Mercury Vault">
               <span>Scan to install</span>
-            </div>
+            </a>
           </div>
         </div>
         <div class="card-body">
@@ -1255,10 +1260,10 @@
           <img class="app-icon icon-learn" src="learn-logo.webp" alt="MercuryLearn Logo" loading="lazy">
           <div class="header-actions">
             <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus">Live Now</span></div>
-            <div class="qr-install hidden-mobile">
+            <a class="qr-install hidden-mobile" href="/mercurylearn-download.html" target="_blank" style="text-decoration:none;cursor:pointer">
               <img src="MercuryLearn_Download_QR.png" alt="Scan to install Mercury Learn">
               <span>Scan to install</span>
-            </div>
+            </a>
           </div>
         </div>
         <div class="card-body">
