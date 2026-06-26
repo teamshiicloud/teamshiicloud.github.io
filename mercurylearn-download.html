@@ -243,27 +243,14 @@ footer strong{color:var(--text)}
   
   <div class="qr-box">
     <p>Or scan this QR code with your phone:</p>
-    <div id="qr-container" class="qr-img"></div>
+    <img class="qr-img" src="qr-code.png" alt="Mercury Learn QR Code" />
   </div>
 </main>
 
 <footer>© 2025–<span id="yr"></span> <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
 
-<script src="qrcode.min.js"></script>
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
-
-// Generate dynamic QR code locally (No external API calls)
-window.addEventListener('DOMContentLoaded', function() {
-  new QRCode(document.getElementById("qr-container"), {
-    text: window.location.href,
-    width: 120,
-    height: 120,
-    colorDark : "#000000",
-    colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.L
-  });
-});
 </script>
 </body>
 </html>
