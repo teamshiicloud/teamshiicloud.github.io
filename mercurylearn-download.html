@@ -243,20 +243,26 @@ footer strong{color:var(--text)}
   
   <div class="qr-box">
     <p>Or scan this QR code with your phone:</p>
-    <img class="qr-img" id="qr-img" alt="QR Code to Download" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+    <div id="qr-container" class="qr-img"></div>
   </div>
 </main>
 
 <footer>© 2025–<span id="yr"></span> <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-9KVyGpqP2aB+JAXm43Vq98U/O5/X2N8Y7z7/N2V1u0kE6VzQ/N/z0n99y2g2l+U/m+9h8k/u8B5j+D3wQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 
-// Generate dynamic QR code pointing to this exact URL
+// Generate dynamic QR code locally (No external API calls)
 window.addEventListener('DOMContentLoaded', function() {
-  var currentUrl = encodeURIComponent(window.location.href);
-  var qrImg = document.getElementById('qr-img');
-  qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=1&data=" + currentUrl;
+  new QRCode(document.getElementById("qr-container"), {
+    text: window.location.href,
+    width: 120,
+    height: 120,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.L
+  });
 });
 </script>
 </body>
