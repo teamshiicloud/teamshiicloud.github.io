@@ -509,6 +509,14 @@
       border-color: rgba(93, 202, 165, 0.5)
     }
 
+    .product-card.king {
+      border-color: rgba(239, 163, 35, 0.25)
+    }
+
+    .product-card.king:hover {
+      border-color: rgba(239, 163, 35, 0.5)
+    }
+
     .vault .glow-line {
       position: absolute;
       top: 0;
@@ -525,6 +533,15 @@
       right: 0;
       height: 2px;
       background: linear-gradient(90deg, transparent, var(--teal), transparent)
+    }
+
+    .king .glow-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #EFA323, transparent)
     }
 
     .card-header {
@@ -1217,51 +1234,15 @@
   <!-- PRODUCTS -->
   <section class="products" id="products">
     <div class="products-grid">
-      <!-- Mercury Vault -->
-      <div class="product-card vault fade-up">
-        <div class="glow-line"></div>
-        <div class="card-header">
-          <img class="app-icon icon-vault" src="vault-logo.webp" alt="Mercury Vault Logo" loading="lazy">
-          <div class="header-actions">
-            <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus">Live Now</span></div>
-            <a class="qr-install hidden-mobile" href="/mercuryvault-download.html" target="_blank" style="text-decoration:none;cursor:pointer">
-              <img src="MercuryVault_Download_QR.png" alt="Scan to install Mercury Vault">
-              <span>Scan to install</span>
-            </a>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Mercury Vault</div>
-          <div class="card-tagline" id="vaultTagline">Mini game hub · Alchemy & Modern World</div>
-          <div class="card-desc" id="vaultDesc">A vibrant entertainment world blending mystical alchemy with modern
-            urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.</div>
-          <div class="platform-row">
-            <a class="platform-chip chip-live" id="vaultAndroid"
-              href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener"
-              style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26"
-                viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z" />
-              </svg> Android · Live</a>
-            <a class="platform-chip chip-live" id="vaultIOS"
-              href="https://apps.apple.com/us/app/mercuryvault-pro/id6775095921" target="_blank" rel="noopener"
-              style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26"
-                viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-              </svg> iOS · Live</a>
-          </div>
-        </div>
-      </div>
       <!-- MercuryLearn -->
-      <div class="product-card learn fade-up" style="transition-delay:0.15s">
+      <div class="product-card learn fade-up">
         <div class="glow-line"></div>
         <div class="card-header">
           <img class="app-icon icon-learn" src="learn-logo.webp" alt="MercuryLearn Logo" loading="lazy">
           <div class="header-actions">
             <div class="status-badge badge-live"><span class="live-dot"></span><span id="learnStatus">Live Now</span></div>
             <a class="qr-install hidden-mobile" href="/mercurylearn-download.html" target="_blank" style="text-decoration:none;cursor:pointer">
-              <img src="MercuryLearn_Download_QR.png" alt="Scan to install Mercury Learn">
+              <img src="MercuryLearn_Download_QR.png" alt="Scan to install Mercury Learn" loading="lazy">
               <span>Scan to install</span>
             </a>
           </div>
@@ -1281,6 +1262,77 @@
               </svg> Android · Live</a>
             <a class="platform-chip chip-live" id="learnIOS"
               href="https://apps.apple.com/us/app/mercury-learn/id6775096625" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg> iOS · Live</a>
+          </div>
+        </div>
+      </div>
+      <!-- Penalty King -->
+      <div class="product-card king fade-up" style="transition-delay:0.15s">
+        <div class="glow-line"></div>
+        <div class="card-header">
+          <img class="app-icon icon-king" src="penaltyking-logo.webp" alt="Penalty King Logo" loading="lazy">
+          <div class="header-actions">
+            <div class="status-badge badge-live"><span class="live-dot"></span><span id="kingStatus">Live Now</span></div>
+            <a class="qr-install hidden-mobile" href="/penaltyking-download.html" target="_blank" style="text-decoration:none;cursor:pointer">
+              <img src="PenaltyKing_Download_QR.webp" alt="Scan to install Penalty King" loading="lazy">
+              <span>Scan to install</span>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Penalty King</div>
+          <div class="card-tagline" id="kingTagline">Soccer prediction game · Challenge yourself</div>
+          <div class="card-desc" id="kingDesc">Test your skills with ultimate penalty prediction gameplay. Challenge yourself, predict like a pro, and compete with players worldwide.</div>
+          <div class="platform-row">
+            <a class="platform-chip chip-live" id="kingAndroid"
+              href="https://play.google.com/store/apps/details?id=com.penaltyking.app" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z" />
+              </svg> Android · Live</a>
+            <a class="platform-chip chip-live" id="kingIOS"
+              href="https://apps.apple.com/us/app/penaltykings/id6777037291" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              </svg> iOS · Live</a>
+          </div>
+        </div>
+      </div>
+      <!-- Vault moved down -->
+      <div class="product-card vault fade-up" style="transition-delay:0.3s">
+        <div class="glow-line"></div>
+        <div class="card-header">
+          <img class="app-icon icon-vault" src="vault-logo.webp" alt="Mercury Vault Logo" loading="lazy">
+          <div class="header-actions">
+            <div class="status-badge badge-live"><span class="live-dot"></span><span id="vaultStatus">Live Now</span></div>
+            <a class="qr-install hidden-mobile" href="/mercuryvault-download.html" target="_blank" style="text-decoration:none;cursor:pointer">
+              <img src="MercuryVault_Download_QR.png" alt="Scan to install Mercury Vault" loading="lazy">
+              <span>Scan to install</span>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Mercury Vault</div>
+          <div class="card-tagline" id="vaultTagline">Mini game hub · Alchemy & Modern World</div>
+          <div class="card-desc" id="vaultDesc">A vibrant entertainment world blending mystical alchemy with modern
+            urban life. Casual mini-games, light gameplay — perfect for every relaxing moment.</div>
+          <div class="platform-row">
+            <a class="platform-chip chip-live" id="vaultAndroid"
+              href="https://play.google.com/store/apps/details?id=com.app.mercuryvault" target="_blank" rel="noopener"
+              style="text-decoration:none;cursor:pointer"><svg class="ic-android" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.18 15.64a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zm11.64 0a2.18 2.18 0 1 0 0-4.36 2.18 2.18 0 0 0 0 4.36zM3.09 9.73A1.09 1.09 0 0 0 2 10.82v7.27a1.09 1.09 0 1 0 2.18 0V10.82A1.09 1.09 0 0 0 3.09 9.73zm17.82 0a1.09 1.09 0 0 0-1.09 1.09v7.27a1.09 1.09 0 0 0 2.18 0V10.82a1.09 1.09 0 0 0-1.09-1.09zM17.09 2l-1.55 2.84A6.54 6.54 0 0 0 12 4a6.54 6.54 0 0 0-3.54 1.07L6.91 2A.64.64 0 0 0 5.8 2.64l1.5 2.73A6.55 6.55 0 0 0 5.45 9.73v.55h13.1v-.55a6.55 6.55 0 0 0-1.85-4.36l1.5-2.73A.64.64 0 0 0 17.09 2z" />
+              </svg> Android · Live</a>
+            <a class="platform-chip chip-live" id="vaultIOS"
+              href="https://apps.apple.com/us/app/mercuryvault-pro/id6775095921" target="_blank" rel="noopener"
               style="text-decoration:none;cursor:pointer"><svg class="ic-apple" width="26" height="26"
                 viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -1358,6 +1410,9 @@
         learnStatus: "Live Now", learnTagline: "Micro-learning app · Learn smarter, go further",
         learnDesc: "Next-gen learning app with AI-personalized paths, scientific spaced repetition, and curated content — learn faster, remember longer, progress every day.",
         learnAndroid: `${ANDROID_ICO} Android · Live`, learnIOS: `${APPLE_ICO} iOS · Live`,
+        kingStatus: "Live Now", kingTagline: "Soccer prediction game · Challenge yourself",
+        kingDesc: "Test your skills with ultimate penalty prediction gameplay. Challenge yourself, predict like a pro, and compete with players worldwide.",
+        kingAndroid: `${ANDROID_ICO} Android · Live`, kingIOS: `${APPLE_ICO} iOS · Live`,
         aboutTitle: 'Built with <span style="color:var(--teal)">Passion</span>',
         aboutText: 'We are a small but highly focused team based in Vietnam. Every product we build starts from a simple question: <strong>What do users truly need?</strong> We believe the best technology <strong>disappears into the background</strong> — leaving only pure experience and real value.',
         p1name: "Mobile Gaming", p1desc: "Light games, refined UI",
@@ -1378,6 +1433,9 @@
         vaultStatus: "配信中", vaultTagline: "ミニゲームハブ · 錬金術と現代の世界",
         vaultDesc: "神秘的な錬金術と都市の現代生活が融合したエンタメワールド。カジュアルなミニゲームで、いつでもリラックスできます。",
         vaultAndroid: `${ANDROID_ICO} Android · 配信中`, vaultIOS: `${APPLE_ICO} iOS · 配信中`,
+        kingStatus: "配信中", kingTagline: "サッカー予測ゲーム · 自分の腕を試す",
+        kingDesc: "究極のペナルティ予測ゲームで腕を試してください。プロのように予測し、世界中のプレイヤーと競いましょう。",
+        kingAndroid: `${ANDROID_ICO} Android · 配信中`, kingIOS: `${APPLE_ICO} iOS · 配信中`,
         learnStatus: "配信中", learnTagline: "マイクロ学習アプリ · スマートに学ぼう",
         learnDesc: "AIによる個別最適化、科学的な間隔反復、厳選コンテンツで学習効率を最大化。速く学び、長く記憶し、毎日成長できます。",
         learnAndroid: `${ANDROID_ICO} Android · 配信中`, learnIOS: `${APPLE_ICO} iOS · 配信中`,
@@ -1401,6 +1459,9 @@
         vaultStatus: "출시됨", vaultTagline: "미니 게임 허브 · 연금술과 현대 세계",
         vaultDesc: "신비로운 연금술과 현대 도시 생활이 어우러진 엔터테인먼트 세계. 캐주얼 미니 게임으로 언제든지 편안한 시간을 즐기세요.",
         vaultAndroid: `${ANDROID_ICO} Android · 출시됨`, vaultIOS: `${APPLE_ICO} iOS · 출시됨`,
+        kingStatus: "출시됨", kingTagline: "축구 예측 게임 · 실력을 겨루세요",
+        kingDesc: "궁극의 페널티 예측 게임으로 실력을 시험해 보세요. 프로처럼 예측하고 세계 플레이어들과 경쟁하세요.",
+        kingAndroid: `${ANDROID_ICO} Android · 출시됨`, kingIOS: `${APPLE_ICO} iOS · 출시됨`,
         learnStatus: "출시됨", learnTagline: "마이크로 러닝 앱 · 스마트하게 배우기",
         learnDesc: "AI 개인화 학습 경로, 과학적 반복 학습, 엄선된 콘텐츠로 더 빠르게 배우고, 오래 기억하고, 매일 성장하세요.",
         learnAndroid: `${ANDROID_ICO} Android · 출시됨`, learnIOS: `${APPLE_ICO} iOS · 출시됨`,
@@ -1424,6 +1485,9 @@
         vaultStatus: "Đang hoạt động", vaultTagline: "Hub mini game · Nhà giả kim & Thế giới hiện đại",
         vaultDesc: "Thế giới giải trí kết hợp giữa thuật giả kim huyền bí và nhịp sống đô thị hiện đại. Mini game đa dạng, gameplay nhẹ nhàng — hoàn hảo cho mọi khoảnh khắc thư giãn.",
         vaultAndroid: `${ANDROID_ICO} Android · Live`, vaultIOS: `${APPLE_ICO} iOS · Live`,
+        kingStatus: "Đang hoạt động", kingTagline: "Game dự đoán bóng đá · Thử thách bản thân",
+        kingDesc: "Thử thách bản thân với trò chơi dự đoán penalty tối ưu. Dự đoán như một chuyên gia và cạnh tranh với những người chơi trên toàn thế giới.",
+        kingAndroid: `${ANDROID_ICO} Android · Live`, kingIOS: `${APPLE_ICO} iOS · Live`,
         learnStatus: "Đang hoạt động", learnTagline: "Micro-learning app · Học thông minh, tiến xa hơn",
         learnDesc: "Ứng dụng học tập thế hệ mới với AI cá nhân hóa lộ trình, hệ thống spaced repetition khoa học và nội dung được chắt lọc — học nhanh, nhớ lâu, tiến bộ mỗi ngày.",
         learnAndroid: `${ANDROID_ICO} Android · Live`, learnIOS: `${APPLE_ICO} iOS · Live`,
@@ -1447,6 +1511,9 @@
         vaultStatus: "เปิดให้บริการ", vaultTagline: "มินิเกมฮับ · การเล่นแร่แปรธาตุ & โลกสมัยใหม่",
         vaultDesc: "โลกบันเทิงที่ผสมผสานระหว่างการเล่นแร่แปรธาตุลึกลับกับชีวิตเมืองสมัยใหม่ มินิเกมหลากหลาย เล่นง่าย — เหมาะกับทุกช่วงเวลาพักผ่อน",
         vaultAndroid: `${ANDROID_ICO} Android · เปิดแล้ว`, vaultIOS: `${APPLE_ICO} iOS · เปิดแล้ว`,
+        kingStatus: "เปิดให้บริการ", kingTagline: "เกมทำนายฟุตบอล · ท้าทายตนเอง",
+        kingDesc: "ท้าทายตนเองด้วยเกมทำนายเพนัลตี้ที่สูงสุด ทำนายเหมือนมืออาชีพ และแข่งขันกับผู้เล่นทั่วโลก",
+        kingAndroid: `${ANDROID_ICO} Android · เปิดแล้ว`, kingIOS: `${APPLE_ICO} iOS · เปิดแล้ว`,
         learnStatus: "เปิดให้บริการ", learnTagline: "แอปเรียนรู้แบบไมโคร · เรียนฉลาด ก้าวไกล",
         learnDesc: "แอปการเรียนรู้ยุคใหม่ด้วย AI ปรับแต่งเส้นทางส่วนตัว ระบบทบทวนซ้ำตามหลักวิทยาศาสตร์ และเนื้อหาคัดสรร — เรียนเร็ว จำได้นาน พัฒนาทุกวัน",
         learnAndroid: `${ANDROID_ICO} Android · เปิดแล้ว`, learnIOS: `${APPLE_ICO} iOS · เปิดแล้ว`,
@@ -1462,8 +1529,8 @@
       }
     };
 
-    const IDS = ['eyebrow', 'h1line1', 'h1line2', 'heroSub', 'ctaExplore', 'ctaContact', 'scrollHint', 'secLabel', 'secAboutLabel', 'secContactLabel', 'vaultStatus', 'vaultTagline', 'vaultDesc', 'vaultAndroid', 'vaultIOS', 'learnStatus', 'learnTagline', 'learnDesc', 'learnAndroid', 'learnIOS', 'aboutTitle', 'aboutText', 'p1name', 'p1desc', 'p2name', 'p2desc', 'p3name', 'p3desc', 'p4name', 'p4desc', 'contactTitle', 'contactSub', 'footerText'];
-    const KEYS = ['eyebrow', 'h1l1', 'h1l2', 'heroSub', 'ctaExplore', 'ctaContact', 'scrollHint', 'secLabel', 'secAboutLabel', 'secContactLabel', 'vaultStatus', 'vaultTagline', 'vaultDesc', 'vaultAndroid', 'vaultIOS', 'learnStatus', 'learnTagline', 'learnDesc', 'learnAndroid', 'learnIOS', 'aboutTitle', 'aboutText', 'p1name', 'p1desc', 'p2name', 'p2desc', 'p3name', 'p3desc', 'p4name', 'p4desc', 'contactTitle', 'contactSub', 'footer'];
+    const IDS = ['eyebrow', 'h1line1', 'h1line2', 'heroSub', 'ctaExplore', 'ctaContact', 'scrollHint', 'secLabel', 'secAboutLabel', 'secContactLabel', 'vaultStatus', 'vaultTagline', 'vaultDesc', 'vaultAndroid', 'vaultIOS', 'kingStatus', 'kingTagline', 'kingDesc', 'kingAndroid', 'kingIOS', 'learnStatus', 'learnTagline', 'learnDesc', 'learnAndroid', 'learnIOS', 'aboutTitle', 'aboutText', 'p1name', 'p1desc', 'p2name', 'p2desc', 'p3name', 'p3desc', 'p4name', 'p4desc', 'contactTitle', 'contactSub', 'footerText'];
+    const KEYS = ['eyebrow', 'h1l1', 'h1l2', 'heroSub', 'ctaExplore', 'ctaContact', 'scrollHint', 'secLabel', 'secAboutLabel', 'secContactLabel', 'vaultStatus', 'vaultTagline', 'vaultDesc', 'vaultAndroid', 'vaultIOS', 'kingStatus', 'kingTagline', 'kingDesc', 'kingAndroid', 'kingIOS', 'learnStatus', 'learnTagline', 'learnDesc', 'learnAndroid', 'learnIOS', 'aboutTitle', 'aboutText', 'p1name', 'p1desc', 'p2name', 'p2desc', 'p3name', 'p3desc', 'p4name', 'p4desc', 'contactTitle', 'contactSub', 'footer'];
 
     function applyLang(lang) {
       loadLanguageFonts(lang);
