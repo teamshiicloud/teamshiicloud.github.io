@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download Mercury Learn — Mercury Labs Studio</title>
-<meta name="description" content="Download Mercury Learn — the ultimate mobile learning experience. Master new skills on iOS and Android. Available now!">
+<title>Download Penalty King — Soccer Prediction Game</title>
+<meta name="description" content="Download Penalty King — the ultimate soccer penalty prediction game. Challenge yourself, predict like a pro on iOS and Android!">
 <meta name="author" content="Mercury Labs Studio">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -16,36 +16,18 @@
     var ua = navigator.userAgent || navigator.vendor || window.opera;
     var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
     var isAndroid = /android/i.test(ua);
-    var isMac = /Macintosh/.test(ua); // iPads on iOS 13+ may report as Mac
-    
-    // iPad iOS 13+ workaround
+    var isMac = /Macintosh/.test(ua);
+
     if (isMac && navigator.maxTouchPoints && navigator.maxTouchPoints > 1) {
       isIOS = true;
     }
 
     if (isIOS) {
-      window.location.replace("https://apps.apple.com/us/app/mercury-learn/id6775096625");
+      window.location.replace("https://apps.apple.com/us/app/penaltykings/id6777037291");
     } else if (isAndroid) {
-      window.location.replace("https://play.google.com/store/apps/details?id=com.mercurylearn.app");
+      window.location.replace("https://play.google.com/store/apps/details?id=com.penaltyking.app");
     }
-    // If not mobile, do nothing and let the page load
   })();
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script>
-window.addEventListener('load',function(){
-  var script=document.createElement('script');
-  script.async=true;
-  script.src="https://www.googletagmanager.com/gtag/js?id=G-6VFPMPZKQP";
-  document.head.appendChild(script);
-  script.onload=function(){
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js',new Date());
-    gtag('config','G-6VFPMPZKQP');
-  }
-});
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,11 +36,10 @@ window.addEventListener('load',function(){
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --blue:#185FA5;--blue-light:#3A82C4;--blue-glow:rgba(24,95,165,0.18);
-  --teal:#5DCAA5;--teal-glow:rgba(93,202,165,0.15);
-  --amber:#EF9F27;--amber-glow:rgba(239,159,39,0.2);
+  --gold:#EFA323;--gold-light:#F5B14D;--gold-glow:rgba(239,163,35,0.18);
+  --blue:#4A9FD8;--blue-glow:rgba(74,159,216,0.15);
   --dark:#06101E;--dark2:#0C1A2E;
-  --text:#E8F0FB;--muted:#7A9BC4;--border:rgba(93,202,165,0.15);
+  --text:#E8F0FB;--muted:#7A9BC4;--border:rgba(239,163,35,0.15);
 }
 html{scroll-behavior:smooth}
 body{background:var(--dark);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
@@ -66,8 +47,8 @@ body{background:var(--dark);font-family:'DM Sans',sans-serif;color:var(--text);o
 /* BG effects */
 .stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;background:radial-gradient(2px 2px at 20px 30px,#eee,rgba(238,238,238,0.2) 0.5px,transparent 0.5px),radial-gradient(2px 2px at 60px 70px,#fff,rgba(255,255,255,0.3) 1px,transparent 1px),radial-gradient(1px 1px at 50px 50px,#ddd,rgba(221,221,221,0.2) 0.5px,transparent 0.5px),radial-gradient(1px 1px at 130px 80px,#fff,rgba(255,255,255,0.3) 0.5px,transparent 0.5px);background-repeat:repeat;background-size:200px 200px;opacity:0.5}
 .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);will-change:transform,filter}
-.orb1{width:500px;height:500px;background:var(--blue-glow);top:-100px;right:-100px;animation:drift 12s ease-in-out infinite alternate}
-.orb2{width:400px;height:400px;background:var(--teal-glow);bottom:0;left:-100px;animation:drift 14s ease-in-out infinite alternate-reverse}
+.orb1{width:500px;height:500px;background:var(--gold-glow);top:-100px;right:-100px;animation:drift 12s ease-in-out infinite alternate}
+.orb2{width:400px;height:400px;background:var(--blue-glow);bottom:0;left:-100px;animation:drift 14s ease-in-out infinite alternate-reverse}
 @keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(30px,20px)}}
 
 /* NAV */
@@ -75,7 +56,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .logo-mark{width:36px;height:36px;object-fit:contain;flex-shrink:0}
 .logo-name{font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:var(--text);white-space:nowrap}
-.logo-name em{color:var(--teal);font-style:normal}
+.logo-name em{color:var(--gold);font-style:normal}
 .nav-back{font-size:13px;font-weight:400;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:7px;border:0.5px solid rgba(255,255,255,0.1);transition:color 0.2s,background 0.2s,border-color 0.2s;display:flex;align-items:center;gap:6px}
 .nav-back:hover{color:var(--text);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.2)}
 
@@ -88,11 +69,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
   border-radius: 22px;
   margin-bottom: 24px;
   object-fit: cover;
-  box-shadow: 0 12px 30px -10px rgba(93,202,165,0.4);
+  box-shadow: 0 12px 30px -10px rgba(239,163,35,0.4);
 }
 
 .page-title{font-family:'Sora',sans-serif;font-size:clamp(32px, 5vw, 48px);font-weight:800;letter-spacing:-1px;line-height:1.2;margin-bottom:16px}
-.page-title em{font-style:normal;background:linear-gradient(90deg,var(--blue-light),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-title em{font-style:normal;background:linear-gradient(90deg,var(--gold-light),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .page-desc{font-size:16px;line-height:1.7;color:var(--muted);max-width:540px;margin:0 auto 36px}
 
 .download-buttons {
@@ -199,7 +180,7 @@ footer strong{color:var(--text)}
   }
   .orb1{width:300px;height:300px}
   .orb2{width:250px;height:250px}
-  .qr-box { display: none; } /* Hide QR on smaller screens just in case */
+  .qr-box { display: none; }
 }
 </style>
 </head>
@@ -220,30 +201,30 @@ footer strong{color:var(--text)}
 
 <!-- CONTENT -->
 <main class="content">
-  <img class="app-icon-real" src="learn-logo.webp" alt="Mercury Learn Logo">
-  
-  <h1 class="page-title">Download <em>Mercury Learn</em></h1>
-  <p class="page-desc">The ultimate learning experience is waiting for you. Mercury Learn is designed specifically for mobile devices. Download it now to get started.</p>
-  
+  <img class="app-icon-real" src="penaltyking-logo.webp" alt="Penalty King Logo">
+
+  <h1 class="page-title">Download <em>Penalty King</em></h1>
+  <p class="page-desc">Challenge yourself with the ultimate penalty prediction experience. Download Penalty King now and test your skills against the world.</p>
+
   <div class="download-buttons">
-    <a href="https://apps.apple.com/us/app/mercury-learn/id6775096625" class="btn-store btn-apple" target="_blank" rel="noopener">
+    <a href="https://apps.apple.com/us/app/penaltykings/id6777037291" class="btn-store btn-apple" target="_blank" rel="noopener">
       <span class="sub">Download on the</span>
       <span class="main">App Store</span>
     </a>
-    
-    <a href="https://play.google.com/store/apps/details?id=com.mercurylearn.app" class="btn-store btn-google" target="_blank" rel="noopener">
+
+    <a href="https://play.google.com/store/apps/details?id=com.penaltyking.app" class="btn-store btn-google" target="_blank" rel="noopener">
       <span class="sub">Get it on</span>
       <span class="main">Google Play</span>
     </a>
   </div>
-  
+
   <div class="qr-box">
     <p>Or scan this QR code with your phone:</p>
-    <img class="qr-img" src="MercuryLearn_Download_QR.png" alt="Mercury Learn QR Code" />
+    <img class="qr-img" src="PenaltyKing_Download_QR.webp" alt="Penalty King Download QR Code" />
   </div>
 </main>
 
-<footer>© 2025–<span id="yr"></span> <strong>Mercury Labs Studio</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
+<footer>© 2025–<span id="yr"></span> <strong>Penalty King</strong> · Crafted with passion in Vietnam 🇻🇳</footer>
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
