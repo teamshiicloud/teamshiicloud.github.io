@@ -1,5 +1,5 @@
 PRIVACY POLICY & TERMS OF SERVICE
-App: Alchemist.exe
+App: Alchemist.exe 
 
 Effective Date: April 26, 2026
 
